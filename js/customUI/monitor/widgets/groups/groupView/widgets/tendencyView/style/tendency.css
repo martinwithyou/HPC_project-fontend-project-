@@ -1,0 +1,28 @@
+.tendency_select_time {
+	display: block;
+	margin-left: 20px;
+}
+.group_tendency_box {
+	margin-bottom: 15px;
+}
+.group_selected {
+	overflow: hidden;
+	margin:20px;
+}
+.mt20 {
+	margin-bottom: 20px;
+}
+.tendency_title {
+	text-align: center;
+	font-size: 16px;
+	margin:0;
+}
+.tendency_title a, .tendency_title a:hover,.tendency_title a:link,.tendency_title a:visited   {
+	text-decoration: none;
+	color:inherit;
+	cursor: text;
+}
+.group_tendency_canvas {
+	width: 100%;
+	height: 250px;
+}

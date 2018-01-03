@@ -1,0 +1,13 @@
+{
+    "ret":"success",
+    "msg":"",
+    "groups":[
+                {
+                    "id":"1",
+                    "groupname":"GPU"
+                },{
+                    "id":"2",
+                    "groupname":"大内存"
+                }
+            ]
+}

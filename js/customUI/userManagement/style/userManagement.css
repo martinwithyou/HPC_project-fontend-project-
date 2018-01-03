@@ -1,0 +1,161 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.overall-padding {
+	padding-top: 20px;
+}
+
+.userModalInput {
+	padding-right: 0px;
+	display: inline-block;
+	padding-left: 7px;
+	width: 180px;
+}
+
+.btn-narrowModal {
+	width: 50%;
+	margin-right: 25%;
+}
+
+#userGrid  tr td:first-child {
+	text-align: center;
+}
+
+#userGrid  tr td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/default.png');
+	/*content:"\f10c";*/ /* fa-circle-o */
+	/*content: "\f096";*/ /* fa-square-o */
+	/*font-family: FontAwesome;*/
+}
+
+#userGrid  tr.selected td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/check.png')
+		!important;
+	/*content:"\f05d";*/ /* fa-check-circle-o */
+	/*content: "\f046";*/ /* fa-check-square-o */
+}
+
+#userGrid  tr:hover td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/hover.png');
+}
+
+.dt-center {
+	text-align: center;
+}
+
+.multiselect.btn.btn-default {
+	overflow: inherit !important;
+}
+
+.left-style {
+	padding-left: 30px;
+	padding-right: 0px;
+}
+
+.right-style {
+	padding-right: 30px;
+	padding-left: 0px;
+}
+
+.tips-header {
+	font-weight: 600;
+}
+
+.tips-content {
+	padding-left: 20px;
+}
+
+.deletingStatusIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/deleting.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.creatingStatusIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/adding.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.invalidStatusIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/invalid.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.errorStatusIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/invalid.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.updatingStatusIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/updating.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.warningIcon {
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	background-image:
+		url('/static/js/customUI/userManagement/style/images/warning.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+
+.modal-footer-overall {
+	margin-bottom: 15px;
+}
+
+#userGrid_length{
+	width:30%;
+	
+	float:left;
+}
+#userGrid_filter{
+	width:30%;
+	
+	float:right;
+}
+#userGrid_info{
+	width:30%;
+	
+	float:left;
+}
+#userGrid_paginate{
+	width:30%;
+	
+	float:right;
+}

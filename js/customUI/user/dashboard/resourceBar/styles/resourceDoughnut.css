@@ -1,0 +1,77 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+<!-- /*
+#cpu-holder { position:relative; width:800px; height:600px }
+#cpu-holder canvas { position:absolute; top:0; left:0; z-index:0 }
+
+
+
+.donut-inner
+{
+margin-top: -100px;
+margin-bottom: 100px;
+}
+.donut-inner h5
+{
+margin-bottom: 5px;
+margin-top: 0;
+}
+.donut-inner span {font-size: 12px;}
+*/
+-->
+.resource-holder {
+	display: inline-block;
+	margin-top: 18px;
+	margin-bottom: 18px; //
+	height: 200px;
+	margin-left: 4.83%;
+	margin-right: 4.83%;
+	/*border:5px solid #000000;*/
+}
+
+.resource-header {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.resource-usage {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.resource-container {
+	text-align: center;
+	height:218px;
+}
+<!-- /*
+#clusterCPU-holder,
+#clusterMemory-holder,
+#storage-holder{
+	width:30%;
+}*/
+-->
+@media only screen and (min-width: 980px) and (max-width: 1200px) {
+	#martinWithYou_1{
+        width:50% !important;
+        float:left;
+        height:218px;
+  }
+    #martinWithYou_2{
+        width:50% !important;
+        float:right;
+        height:218px;
+  }
+    #martinWithYou_3{
+    	height:218px;
+    }
+}
+

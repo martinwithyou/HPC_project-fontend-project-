@@ -1,0 +1,9 @@
+{
+	"result" : "success",
+	"message" : "",
+	"queues" : [
+		"双十二",
+		"测试队列",
+		"数学模型"
+	]
+}

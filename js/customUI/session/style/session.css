@@ -1,0 +1,33 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.sessionSelectClass {
+	
+}
+
+.sessionsArea {
+	padding-left: 20px;
+}
+
+.sessionsViewArea {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#allSessionsTable_wrapper label {
+	
+}
+.new_session_icon{
+	width:24px;
+	height:24px;
+	margin-top:18px;
+	margin-right:8px;
+	float:left;
+	background-image: url(../resources/session_36x36.png);
+}

@@ -1,0 +1,151 @@
+<div class="physicals_body" id="physicals_body">
+    <h2 class="physicals-physical">
+        <a href="javascript:;" id="physicals-view">{{nls.crumbs}}</a>
+        <img src="static/js/customUI/monitor/widgets/physicals/rack/img/rightPointer16.png" />
+        <span id="physicals-physical-name"></span>
+    </h2>
+	<div class="btn-group" role="group" aria-label="...">
+		<div type="button" class="btn btn-default physicals_btn active" id="physical_rack_view" node_display='default'>{{nls.btn_default}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_temperature_view" node_display='temperature'>{{nls.btn_temperature}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_energy_view" node_display='energy'>{{nls.btn_energy}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_load_view" node_display='load'>{{nls.btn_load}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_cpu_usage_view" node_display='cpu_usage'>{{nls.btn_cpu_usage}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_Memory_view" node_display='memory_usage'>{{nls.btn_memory_usage}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_disk_view" node_display='disk_usage'>{{nls.btn_disk_usage}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_network_view" node_display='network'>{{nls.btn_network}}</div>
+		<div type="button" class="btn btn-default physicals_btn" id="physical_core_view" node_display='cpu_core_used'>{{nls.btn_cpu_core_used}}</div>
+	</div>
+	<div class="physical_content" id="physical_content">
+
+		<div class="physical_content_body" id="physical_content_body">
+            <div class="rack_content" id="rack_content" node_display='default'>
+                <div class="physical-title">
+                    <div class="physical-title-tab active col-xs-6" id="physical_rack">{{nls.tab_physical_rack}}</div>
+                    <div class="physical-title-tab col-xs-6" id="physical_data">{{nls.tab_physical_data}}</div>
+                </div>
+                <div id="content" class="monitor_rack">
+                    <img src="static/js/customUI/monitor/widgets/physicals/rack/img/rack_img/hardware_map_rack.png" />
+                    <div class="monitor_rack_left">
+                        <div id="monitor_rack_left" class="monitor_rack_public">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="suspension">
+                    <ul>
+                        <li>{{nls.suspension_li}}<span id="suName"></span></li>
+                    </ul>
+                </div>
+                <div class="contrast_table">
+                    <div class="table_btn">
+                        <div type="button" class="btn btn-default physicals_content_btn" id="physical_3d" style="" data-target="#plotly_Modal" >{{nls.tab_plotly_Modal}}</div>
+                    </div>
+                    <table id="contrast_table" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th style="text-align: center">{{nls.contrast_table_name}}</th>
+                            <th id="contrast_table_content" style="text-align: center">{{nls.contrast_table_type}}</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="rack_information">
+                <div class="physical_rack_information" id="physical_rack_information">
+                    <div class="rack_information_left">
+                        <h4>{{nls.rack_information_left_h4}}</h4>
+                        <ul class="information_left">
+                            <li class="physical_clear"><i>{{nls.rack_hostname}}</i>
+                                <span id="information_left_name"></span>
+                            </li>
+                            <li class="physical_clear"><i>{{nls.rack_posi}}</i>
+                                <span id="information_left_posi"></span>
+                            </li>
+                            <li class="physical_clear"><i>{{nls.rack_nodes_cont}}</i>
+                                <span id="information_left_nodes"></span>
+                            </li>
+                        </ul>
+                        <ul class="information_left physical_clear" id="information_left_bottom">
+                            <li class="physical_clear"><i>{{nls.rack_nodes_busy}}</i>
+                                <span id="information_left_busy"></span>
+                            </li>
+                            <li class="physical_clear"><i>{{nls.rack_nodes_free}}</i>
+                                <span id="information_left_free"></span>
+                            </li>
+                            <li class="physical_clear"><i>{{nls.rack_nodes_occupy}}</i>
+                                <span id="information_left_occupy"></span>
+                            </li>
+                            <li class="physical_clear"><i>{{nls.rack_nodes_off}}</i>
+                                <span id="information_left_off"></span>
+                            </li>
+                        </ul>
+                        <div id="color_model">
+                            <div style="position: relative"><div id="color_model_hover"></div></div>
+                            <p><b></b><b></b><a></a></p>
+                            <i style="background: #F6EFA6;"></i><i style="background: #EFD79B;"></i><i style="background: #E9BF8F;"></i><i style="background: #E2A684;"></i><i style="background: #DB8E79;"></i><i style="background: #D57B6F;"></i><i style="background: #D06D66;"></i><i style="background: #CA605D;"></i><i style="background: #C55255;"></i><i style="background: #BF444C;"></i>
+                        </div>
+                    </div>
+                    <div id="rack_information_right" class="rack_information_right"></div>
+                </div>
+                <div class="rack_node_information hidden" id="rack_node_information"></div>
+            </div>
+		</div>
+	</div>
+</div>
+<div id="nodes_status_model"></div>
+{{!加载模态框开始}}
+
+<div class="modal fade" id="progressDialog" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+
+    <div class="modal-dialog" style="margin-top:150px;width:300px">
+
+        <div class="modal-content">
+
+            <p style="text-align:center;margin-top:30px;margin-bottom:30px"><img src="/static/js/customUI/user/dashboard/job/resources/loading.gif" id="loading_img"></div></p>
+
+    </div>
+
+</div>
+
+
+{{!加载模态框结束}}
+
+{{!结果模态框开始}}
+
+<div class="modal fade" id="progressDialog_1" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+
+    <div class="modal-dialog" style="margin-top:200px;">
+
+        <div class="modal-content" style="width:500px;height:50px;background-color:#ffffff;font-size:20px;text-align:center;line-height:50px;">
+
+            {{nls.modal-content}}
+
+        </div>
+
+    </div>
+
+</div>
+
+{{!结果模态框结束}}
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="plotly_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width:720px;position: relative;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body" style="height: 600px">
+        <div  id="3d_plotly"></div>
+      </div>
+      <div class="modal-footer">
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+      </div>
+    </div>
+  </div>
+</div>

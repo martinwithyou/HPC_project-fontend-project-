@@ -1,0 +1,25 @@
+     
+  
+    	<!--general模板开始--->
+            <div class="row" style="width:1000px;">
+                  <form class="form-horizontal" role="form" style="margin-top:15px">
+					<div class="form-group" style="margin-left:10px;margin-top:30px">
+						<label class="col-sm-2 control-label" for="job_name" style="font-size:14px;font-weight:normal">{{nls.jobName}}</label>
+						<div class="col-sm-10">
+							<input style="width:250px" class="form-control" type="text" id="job_name">
+						</div>
+					</div></br>
+					<div class="form-group" style="margin-bottom:80px;margin-left:10px">
+						<label class="col-sm-2 control-label" for="job_file_input" style="font-size:14px;font-weight:normal">*{{nls.jobFile}}</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" id="job_file_input_text" readonly style="width:250px;" placeholder="{{nls.pbs}}">
+							<button style="margin-left:270px;position:relative;top:-34px;height:30px;margin-top:1px" id="job_file_select_btn" type="button" class="btn btn-primary"><div style="margin-top:-2px">{{nls.browse}}</div>
+              				</button>
+							
+							<input type="file" id="job_file_input" style="display:none">
+						</div>
+					</div>
+         		</form>
+            </div>  
+    	<!---general摸板结束--->
+

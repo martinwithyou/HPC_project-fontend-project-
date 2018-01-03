@@ -1,0 +1,83 @@
+<div class="group_selected">
+	<span class="pull-left groups_l">{{nls.selected_time}}</span>
+	<select id="tendency_select_time" class="pull-left tendency_select_time">
+		<option value="hour">{{nls.hour}}</option>
+		<option value="day">{{nls.day}}</option>
+		<option value="week">{{nls.week}}</option>
+		<option value="month">{{nls.month}}</option>
+	</select>
+</div>
+
+<div class="tendency_charts" id="tendency_content">
+	<div class="row">
+		<div class="col-sm-12 group_tendency_box">
+			<div class="col-sm-6 col-md-6 col-lg-3 mt20">
+				<div  id="group_tendency_load" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<a id="load_current" title="当前load值" href="javascript:;"></a>（
+					{{nls.load_b}}
+					<span id="load_total"></span>）
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3 mt20">
+				<div  id="group_tendency_cpu" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="cpu_current"></span>（
+					{{nls.cpu_b}}
+					<span id="cpu_total"></span>）
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3 mt20">
+				<div  id="group_tendency_memory" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="memory_current"></span>
+					（{{nls.memory_b}}
+					<span id="memory_total"></span>G）
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3 mt20">
+				<div  id="group_tendency_disk" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="disk_current"></span>
+					（{{nls.disk_b}}
+					<span id="disk_total"></span>G）
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div  id="group_tendency_network" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					{{nls.network_in_b}}<span id="network_current_in"></span> K ，			
+					{{nls.network_out_b}}<span id="network_current_out"></span> K 
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div  id="group_tendency_energy" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="energy_current"></span>W
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div id="group_tendency_temperature" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="temperature_current"></span>℃
+				</p>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div id="group_tendency_job" class="group_tendency_canvas">
+				</div>
+				<p class="tendency_title">
+					<span id="job_current"></span>
+					（{{nls.job_b}}
+					<span id="job_total"></span>）
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

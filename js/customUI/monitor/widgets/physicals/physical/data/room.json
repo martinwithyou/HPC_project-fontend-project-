@@ -1,0 +1,17 @@
+{
+  "ret": "success",
+  "msg": "",
+  "rooms":[
+    {
+      "name": "Lab开发机房",
+      "id": 123,
+      "location": "shanghai",
+      "node_num": 300,
+      "power_consumption": "5000",
+      "node_busy": 50,
+      "node_used": 50,
+      "node_off": 100,
+      "node_free": 10000
+    }
+  ]
+}

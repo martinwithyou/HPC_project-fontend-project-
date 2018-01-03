@@ -1,0 +1,84 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+html,body{
+	min-height: 100%;
+}
+
+#wrapper{
+	position: absolute;
+	min-height: 100%;
+	padding-bottom: 30px;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	min-width: 1000px;
+}
+#header{
+	min-width:1000px;
+}
+.ui-footer {
+	background-color: #666460;
+	height: 30px;
+	width: 100%;
+	
+	left: 0;
+}
+
+.ui-footer a:link {
+	color: white;
+}
+
+.ui-footer a:visited {
+	color: white;
+}
+
+.ui-footer a:hover {
+	color: white;
+}
+
+.ui-footer a:active {
+	color: white;
+}
+
+.footer-info {
+	color: white;
+	padding-left: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 30px;
+}
+
+.footer-about {
+	color: white;
+	padding-right: 50px;
+	line-height: 30px;
+}
+
+.footer-about-text {
+	float: right;
+}
+
+#footer .ui-footer {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 12px;
+}
+
+.footer-about-hpc {
+	cursor: pointer;
+}
+
+.footer-about-hpc:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div>
+	<div style="margin-top:10px;">
+		<div style="font-size:18px;font-weight:700;margin-left:12px">{{nls.job}}</div>
+		<div style="margin-top:-19px">
+			<select id="select_status" style="border-color:white;float:right;margin-right:25px">
+				<option value="uncompleted">{{nls.uncompleted}}</option>
+				<option value="completed">{{nls.finished}}</option>
+			</select>
+			<select id="select_time" style="border-color:white;float:right;margin-right:45px">
+				<option value="3600">{{nls.last_hour}}</option>
+				<option value="86400">{{nls.last_day}}</option>
+				<option value="604800">{{nls.last_7_days}}</option>
+				<option value="2592000">{{nls.last_30_days}}</option>
+			</select>
+			<select id="select_queue" style="border-color:white;width:100px;float:right;margin-right:45px">
+				<option value="all">{{nls.all_queues}}</option>
+			</select>
+			
+		</div>
+	</div>
+	<hr style="width:100%" size=3>
+	
+	<div style="margin-top:-15px;">
+		<div id="job_chart_running_icon"><div style="float:right;margin-right:25px">{{nls.running}}</div><div style="background-color:#69f0ae;width:15px;height:15px;float:right;margin-right:25px"></div></div>
+		<div id="job_chart_waiting_icon"><div style="float:right;margin-right:25px">{{nls.waiting}}</div><div style="background-color:#00b0ff;width:15px;height:15px;float:right;margin-right:25px"></div></div>
+		<div id="job_chart_finish_icon" style="display:none"><div style="float:right;margin-right:25px">{{nls.finished}}</div><div style="background-color:#b4e89f;width:15px;height:15px;float:right;margin-right:25px"></div></div>
+	</div>
+	
+	<div id="basic" style="margin-top:55px;">
+		<div class="job_chart" style="position:relative;"></div>
+	</div>
+</div>

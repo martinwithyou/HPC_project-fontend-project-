@@ -1,0 +1,27 @@
+{
+	"result" : "success/failed",
+	"message" : "",
+	"name" : "气象分析0315",
+	"filename" : "root/home/气象分析0315.pbs", 
+	"queues" : [
+		"双十二",
+		"测试队列",
+		"数学模型"],
+	"queue_selected" : "测试队列",							
+	"output_path" : "/root/output",						
+	"cpus" : "2",
+	"nodes" : "2",													
+	"share" : false,
+	"mem_size" : "2",												
+	"walltime" : "10",											
+	"trigger" : "finish",
+	"mail" : "admin@lenovo.com",
+	"phone" : "18112345678",
+	"commands" : [												
+		"cd yourworkdir",
+		"echo Running on hosts 'hostname'",
+		"echo Time is 'date'",
+		"echo Directory is 'pwd'",
+		"./yourprog",
+		"echo Time is 'date'"]
+}

@@ -1,0 +1,61 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="container-fluid">
+    <div class="row loginLogoArea"  >
+        <div class="col-md-12" >
+            <div class="licoHeader"></div>
+        </div>
+        <div class="col-md-12">
+            <div class="licoLogo"></div>
+        </div>
+    </div>
+    <div class="row loginformArea" >
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="loginFormClass">
+                    <div class="col-sm-12 login-input-overall" id="loginMsg">
+                    </div>
+                </div>
+               <form id="loginForm" class="loginFormClass" style="padding-top:30px;">
+                    <div class="loginRow" style="padding-bottom:10px;">
+                        <div class="col-sm-12 input-group input-group-lg login-input-overall" id="userNameArea">
+                            <span class="input-group-addon hpcUserIconClass loginInput" style="padding:0px;"></span>
+                            <input type="text" name="username" maxlength="100"
+                                autocapitalize="off"
+                                autocorrect="off" class="form-control loginInput loginInputArea"
+                                id="username" required autofocus>
+                        </div>
+                    </div>
+                    <div class="loginRow" style="padding-bottom:40px;">
+                        <div class="col-sm-12 input-group input-group-lg login-input-overall" id="passwordArea">
+                            <span class="input-group-addon hpcPwdIconClass loginInput" style="padding:0px;"></span>
+                            <input type="password" name="password" maxlength="100"
+                                autocapitalize="off" autocorrect="off" class="form-control loginInput loginInputArea"
+                                id="password" required>
+                        </div>
+                    </div>
+                </form>
+                <div class="loginFormClass">
+                    <div class="loginRow">
+                        <button class="col-sm-12 btn btn-primary form-control input-lg loginBtn" style="color:#22374D;" id="submit-id-submit">{{nls.loginText}}</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="login-footer">
+                <span class="login-footer-version">{{nls.versionNumber}}: {{constants.version}}</span>
+                <span class="login-footer-lenovo">{{nls.allRightsReserved}}: {{constants.year}} <a href="http://www.lenovo.com" target="_blank">{{nls.lenovoGroup}}</a></span>
+                <span class="login-footer-license"><a href="/static/license/lenovo_ch_license.pdf" target="_blank">{{nls.licenseAgreement}}</a></span>
+    </div>
+</div>

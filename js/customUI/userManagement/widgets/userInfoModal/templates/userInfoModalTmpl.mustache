@@ -1,0 +1,184 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="modal fade" role='dialog' id="userInfoModal" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+	<div class="modal-dialog modal-overall">
+		<div class="modal-content modal-content-overall">
+			<div class="modal-header modal-header-overall">
+				<h3 class="modal-title modal-title-overall">{{nls.userInfo}}</h3>
+			</div>
+			<div class="modal-body">
+				
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div id="userModalMsg"></div>
+					</div>		
+					<div class="col-sm-6 left-style">
+						<!-- User Role -->
+						<div class="form-group row inputRow-overall">
+							<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+								<label for="newUserRole" class="control-label">* {{nls.roleName}} </label>
+							</div>
+							<div class="col-sm-8 userModalInput">
+								<select id="newUserRole" class="form-control">
+									<option value="administrator">{{nls.administratorRole}}</option>
+									<option value="operator">{{nls.operatorRole}} </option>
+								</select>
+							</div>
+						</div>
+						<!-- end of User Role -->
+						<!-- User Name -->
+						<div class="form-group row inputRow-overall" id="userNameRowArea">
+							<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+								<label for="newUserName" class="control-label">* {{nls.userName}} </label>
+							</div>
+							<div class="col-sm-8 userModalInput">
+								<input type="text" class="form-control" name="newUserName" id="newUserName" placeholder="USERID" required>
+							</div>
+						</div>
+						<!-- end of User Name -->
+						<!-- Password Inputs -->
+						<div id="userDefinePwd">
+							<div class="form-group row inputRow-overall">
+								<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+									<label for="newUserPassword" class="control-label">* {{nls.userPassword}} </label>
+								</div>							
+								<div class="col-sm-8 userModalInput">
+									<input type="password" data-toggle="validator" class="form-control" id="newUserPassword" name="newUserPassword">
+								</div>
+							</div>
+							<div class="form-group row inputRow-overall has-feedback">
+								<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+									<label for="confirmNewPwd" class="control-label">* {{nls.confirmPassword}} </label>
+								</div>
+								<div class="col-sm-8 userModalInput">
+									<input type="password" class="form-control" id="confirmNewPwd" name="confirmNewPwd">
+									<i id="newPwdStateIcon" class="form-control-feedback"></i>						
+								</div>							
+							</div>
+						</div>
+						<!-- end of Password Inputs -->				
+					</div>
+					<div class="col-sm-6 right-style">
+						<!-- Group Selecting -->
+						<div class="form-group row inputRow-overall">
+							<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+								<label for="newUserGroup" class="control-label">* {{nls.groupName}} </label>
+							</div>
+							<div class="col-sm-8 userModalInput">
+								<select id="userGroupSelect" class="form-control">
+									<!-- need to request group list from backend -->
+								</select>
+							</div>
+						</div>
+						<!-- end of Group Selecting -->
+						<!-- Accounting Group -->
+						<div class="form-group row inputRow-overall">
+							<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+								<label for="userAccountingGroup" class="control-label">* {{nls.accountingGroup}} </label>
+							</div>
+							<div class="col-sm-8 userModalInput">
+								<select id="accountingGroupSelect" class="form-control">
+								</select>
+							</div>
+						</div>
+						<!-- end of Accounting Group -->
+						<!-- Email Address -->		
+						<div class="form-group row inputRow-overall">
+							<div class="col-sm-4 label-modal-overall" style="margin-left:0px;">
+								<label for="newUserEmail" class="control-label">* {{nls.emailAddress}} </label>
+							</div>
+							<div class="col-sm-8 userModalInput">
+								<input type="email" id="newUserEmail" name="newUserEmail" class=" form-control" required>
+							</div>
+						</div>
+						<!-- end of Email Address -->
+					</div>
+				</div>
+				<!-- User Nickname -->
+				<!-- removed in MVP version
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label for="userNickname" class="control-label">{{nls.userNickname}}</label>
+					</div>
+					<div class="col-sm-8 userModalInput">
+						<input type="text" class="form-control" id="userNickname">
+					</div>
+				</div>
+				-->
+				<!-- end of User Nickname -->
+				<!-- Initial Password(select between uniform pwd and user-defined) -->
+				<!-- removed in MVP version
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label for="initialPassword" class="control-label">{{nls.initialPassword}}</label>
+					</div>
+					<div class="col-sm-8 userModalInput">
+						<select id="initialPassword" class="form-control">
+							<option value="uniformPwd">{{nls.useUniformInitialPwd}}</option>
+							<option value="userDefinedPwd">{{nls.userDefinedPwd}}</option>
+						</select>
+					</div>
+				</div>
+				-->
+				<!-- end of Initial Password -->
+				<!-- Available Queue -->
+				<!-- removed in MVP version
+				<div class="form-group row">
+					<div class="col-sm-2">
+						<label for="availableQueue" class="control-label">{{nls.availableQueue}}</label>
+					</div>
+					<div class="col-sm-8 userModalInput">
+						<select name="availableQueue" id="availableQueue" class="form-control" multiple="multiple">						
+						</select>
+					</div>
+				</div>
+				-->
+				<!-- end of Available Queue -->
+				<!-- Available Resource -->
+				<!-- removed in MVP version
+				<div>
+					<div><strong>{{nls.availableResource}}</strong></div>
+					<div class="form-group row">
+						<div class="col-sm-2">
+							<label for="storageAllocation" class="control-label">{{nls.storageAllocation}}</label>
+						</div>
+						<div class="col-sm-8 userModalInput">
+							<input type="text" id="storageAllocation" class="form-control">
+						</div>
+					</div>
+				</div>
+				-->
+				<!-- end of Available Resource -->					
+				
+				<div class="row" style="position:relative;left:-90px;">
+					<div class="col-sm-4 col-sm-offset-4 tips-header" >{{nls.tipsHeaderforOperation}}: </div>
+					<div class="col-sm-4 col-sm-offset-4">
+						<ol class="tips-content">
+							<li>{{nls.tipsContent1}}</li>
+							<li>{{nls.tipsContent2}}</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer modal-footer-overall">
+				<div class="row">
+					<div class="col-sm-6">
+						<button class="btn btn-primary btn-narrowModal" id="userInfoOKBtn">{{nls.OK}}</button>
+					</div>
+					<div class="col-sm-6">
+						<button class="btn btn-default btn-narrowModal" id="userInfoCancelBtn">{{nls.Cancel}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,349 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.table.dataTable thead .sorting_asc{
+	background-image:none ;
+}
+
+.btn-toolbar{
+	margin-bottom: 20px !important;
+}
+
+h3{font-size:20px !important;font-family: "微软雅黑";font-weight: 500;}
+
+.dt-center {
+  text-align: center;
+}
+
+.modal-footer-overall {
+  margin-bottom: 15px;
+  border-top: none;
+}
+
+.overall-heading {
+  line-height: 60px;
+  vertical-align: middle;
+  height: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.userViewArea {
+  padding-left: 0px;
+}
+
+.multiselect-container.dropdown-menu>.active>a {
+  background-color: white;
+  color: #333;
+}
+#listNodesTable_length{
+  width:30%;
+  
+  float:left;
+}
+#listNodesTable_filter{
+  width:30%;
+  
+  float:right;
+}
+#listNodesTable_info{
+  width:30%;
+  
+  float:left;
+}
+#listNodesTable_paginate{
+  width:30%;
+  
+  float:right;
+}
+
+.btn-toolbar{
+    height:30px !important;
+  }
+
+a:link,a:hover,a:visited {
+  text-decoration: none;
+}
+.block-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.block-content {
+  margin-left: 10px;
+}
+
+.overall-padding {
+  padding-top: 20px;
+}
+
+.groupInput {
+  width: 300px;
+  margin-left: 7px;
+  display: inline-block;
+}
+
+#listNodesTable tr td:first-child {
+  text-align: center;
+}
+.allCancle{
+	position:absolute;
+	z-index:10;
+	top:240px;
+	left:37px;
+	width:18px;
+	height:18px;
+	background-image: url(../resource/default.png);
+	
+}
+.allChecked{
+	position:absolute !important;
+	z-index:10 !important;
+	top:240px !important;
+	left:37px !important;
+	width:18px !important;
+	height:18px !important;
+	background-image: url(../resource/check.png) !important;
+}
+#listNodesTable tr td:first-child:before {
+  content:
+    url('/static/js/customUI/monitor/widgets/listView/resource/default.png');
+}
+
+#listNodesTable tr.selected td:first-child:before {
+  content:
+    url('/static/js/customUI/monitor/widgets/listView/resource/check.png')
+    !important;
+}
+
+#listNodesTable tr:hover td:first-child:before {
+  content:
+    url('/static/js/customUI/monitor/widgets/listView/resource/hover.png');
+}
+
+
+/*列表操作按钮开始*/
+.monitor_turn_on{width:80px;height:30px;border:1px solid #e2e2e2;float:left;border-radius:5px;margin-left:20px;line-height:30px;text-align:left;font-size:16px;font-family: "微软雅黑";background-color:#EEEEEE;}
+.monitor_turn_off{width:80px;height:30px;border:1px solid #e2e2e2;float:left;border-radius:5px;margin-left:20px;line-height:30px;text-align:left;font-size:16px;font-family: "微软雅黑";background-color:#EEEEEE;}
+.monitor_WebKVM{width:80px;height:30px;border:1px solid #e2e2e2;float:left;border-radius:5px;margin-left:20px;line-height:30px;text-align:left;font-size:16px;font-family: "微软雅黑";background-color:#EEEEEE;}
+.monitor_WebSSH{width:80px;height:30px;border:1px solid #e2e2e2;float:left;border-radius:5px;margin-left:20px;line-height:30px;text-align:left;font-size:16px;font-family: "微软雅黑";background-color:#EEEEEE;}
+.monitor_turn_on:hover{background-color:#D9D9D9;cursor: pointer;}
+.monitor_turn_off:hover{background-color:#D9D9D9;cursor: pointer;}
+.monitor_WebKVM:hover{background-color:#D9D9D9;cursor: pointer;}
+.monitor_WebSSH:hover{background-color:#D9D9D9;cursor: pointer;}
+.icon_monitor_WebKVM{float:left;width:16px;height:16px;background-image:url(../resource/kvm-16.png);margin-top:2px;margin-left:0px;margin-right:10px;}
+.icon_monitor_WebSSH{float:left;width:16px;height:16px;background-image:url(../resource/ssh-16.png);margin-top:2px;margin-left:0px;margin-right:10px;}
+.icon_monitor_turn_on{float:left;width:16px;height:16px;background-image:url(../resource/powerOn-16.png);margin-top:2px;margin-left:0px;margin-right:10px;}
+.icon_monitor_turn_off{float:left;width:16px;height:16px;background-image:url(../resource/powerOff-16.png);margin-top:2px;margin-left:0px;margin-right:10px;}
+/*列表操作按钮结束*/
+
+.monitor_table{width:100%;position:relative;padding-left:20px;padding-right:20px;}
+.new_monitor_icon{width:24px;height:24px;margin-top:18px;margin-right:8px;float:left;}
+.new_list_icon{ background-image: url(../../../resource/listView36.png);}
+.monitor_button_1{width:500px;height:40px;border:0px solid #e2e2e2;    margin-bottom: 10px}
+
+
+.monitor_modal_body{height:670px;}
+.monitor_modal_up{height:320px;width:970px;}
+.monitor_modal_up_left{width:320px;height:320px;float:left;}
+.monitor_modal_up_right{width:640px;height:320px;float:right;border-left:2px solid #e2e2e2;overflow: auto;}
+.monitor_modal_down{height:320px;width:970px;margin-top:10px;border-top:2px solid #e2e2e2;padding-top:10px;}
+.monitor_modal_down_left{width:320px;height:320px;float:left;}
+.monitor_modal_down_right{width:640px;height:320px;float:right;border-left:2px solid #e2e2e2;background-color:#f2f2f2;}
+
+
+.list_ssh{width:16px;height:16px;margin-top:3px;background-image:url(../resource/ssh-16.png);float:right;}
+.list_ssh:hover{cursor: pointer;cursor: pointer;}
+.list_power_on{width:16px;height:16px;margin-top:3px;background-image:url(../resource/powerOn-16.png);margin-left:40%;}
+.list_power_on:hover{cursor: pointer;box-shadow: 0px 0px 10px #00ff00;border-radius:8px;}
+.list_power_off{width:16px;height:16px;margin-top:3px;background-image:url(../resource/powerOff-16.png);margin-left:40%;}
+.list_power_off:hover{cursor: pointer;box-shadow: 0px 0px 10px #ff0000;border-radius:8px;}
+.list_kvm{width:16px;height:16px;margin-top:3px;background-image:url(../resource/kvm-16.png);float:right;}
+.list_kvm:hover{cursor: pointer;}
+.monitor_node_details{width:20px;height:20px;margin-top:-1px;background-image:url(../resource/details.png);float:right;}
+.monitor_node_details:hover{cursor: pointer;}
+
+#checkall{opacity:0;}
+
+.nodeSelectClass {}
+.nodesArea {padding-left: 20px;}
+/*.nodesViewArea {padding-left: 20px;padding-right: 20px;}*/
+
+/* Only allow plaintext?
+[contenteditable=""],
+[contenteditable="true"] {
+  -webkit-user-modify: read-write-plaintext-only !important;
+}
+*/
+
+/**
+ * Terminal
+ */
+/*.termwindow {
+  padding-top: 15px;
+  border: #fafafa solid 1px;
+  background: linear-gradient(to right, #282828, #444444);
+  position: relative;
+  top:578px !important;
+  left:0px !important;
+  width:1000px;
+  z-index: 200000;
+  transition: opacity 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 20px;
+}*/
+.termwindow{
+	padding-top: 15px;
+    border: #fafafa solid 1px;
+    background: linear-gradient(to right, #282828, #444444);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 200000;
+    transition: opacity 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 20px;
+}
+
+.maximized .termwindow {
+  border: none;
+  box-shadow: none;
+}
+
+.dark .termwindow {
+  box-shadow: none;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13px;
+  padding: 1px 0;
+  font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+  color: #fafafa;
+}
+
+.dark .bar .maximized .bar {
+}
+
+.title {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  font-size: 11px;
+  cursor: default;
+}
+
+.tab {
+  font-size: 13px;
+  margin-right: 8px;
+  margin-top: -2px;
+  float: right;
+  cursor: pointer;
+}
+
+.tab:hover {
+  font-weight: bold;
+}
+
+.grip {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  cursor: se-resize;
+  z-index: -1;
+  background: transparent;
+}
+
+.grip:hover {
+}
+
+.terminal {
+  border: #000 solid 5px;
+  font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+  font-size: 1pc;
+  transition: font-size 0.5s;
+  color: #f0f0f0;
+  background: #000;
+}
+
+.reverse-video {
+  color: #000;
+  background: #f0f0f0;
+}
+
+/**
+ * Page
+ */
+
+h1 {
+  font: 20px/1.5 sans-serif;
+  background: #333;
+  margin: -25px -25px 0 -25px;
+  height: 30px;
+  padding: 10px 25px;
+  color: white;
+  border-top: #e15729 solid 10px;
+}
+
+#open, #lights {
+  font: 20px/1.5 sans-serif;
+  position: fixed;
+  right: 0;
+  padding: 10px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+}
+
+#open {
+  top: 10px;
+  background: #333;
+}
+
+#lights {
+  font-size: 18px;
+  height: 46px;
+  top: 60px;
+  background: #555;
+}
+
+#open:hover, #lights:hover {
+  color: slategrey;
+  background: white;
+}
+
+#open:active, #lights:active {
+  color: orange;
+}
+
+#help {
+  font: 12px/1.5 sans-serif;
+  color: #999;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+.new_list_icon{
+	background-image: url('/static/js/customUI/monitor/resource/listView36.png');
+}
+.dark h1, .dark #help { display: none; }
+.new_list_icon{
+ 	
+	background-image: url('/static/js/customUI/monitor/resource/listView36.png');
+ 
+}
+.monitor_the_time_of_choice_title{float:left !important;}
+.monitor_the_time_of_choice_body{float:left !important;}

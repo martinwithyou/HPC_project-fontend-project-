@@ -1,0 +1,64 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><i class="fa fa-sitemap fa-fw"></i>{{nls.devices}}<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="javascript:void(0)" id="allNodes">{{nls.allNodes}}<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="javascript:void(0)">{{nls.managementNodes}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">{{nls.computeNodes}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">{{nls.loginNodes}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">{{nls.storageNodes}}</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-file"></i>{{nls.installedTemplates}}</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-cube"></i>{{nls.imageRepository}}</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-folder-open-o"></i>{{nls.fileManagement}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->

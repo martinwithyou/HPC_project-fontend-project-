@@ -1,0 +1,73 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="modal fade" id="depositModal" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+	<div class="modal-dialog modal-overall">
+		<div class="modal-content modal-content-overall">
+			<div class="modal-header modal-header-overall">
+				<h3 class="modal-title modal-title-overall depositClass">{{nls.deposit}}</h3>
+				<h3 class="modal-title modal-title-overall deductClass">{{nls.deductCredits}}</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row inputRow-overall">
+					<div class="col-sm-10 col-sm-offset-1" id="msgArea"></div>
+				</div>
+				<div class="row form-group inputRow-overall">
+					<div class="col-sm-3 label-modal-overall">
+						<label for="accountingGroupName" class="control-label">{{nls.accountingGroup}}: </label>
+					</div>
+					<div class="col-sm-8">
+						<span id="accountingGroupName"></span>
+					</div>
+				</div>
+				<div class="row form-group inputRow-overall">
+					<div class="col-sm-3 label-modal-overall">
+						<label for="currentBalanceSpan" class="control-label">{{nls.currentBalance}}: </label>
+					</div>
+					<div class="col-sm-8">
+						<span id="currentBalanceSpan"></span><span>{{nls.moneyType}}</span>
+					</div>
+				</div>
+				<div class="row inputRow-overall">
+					<div class="col-sm-8 col-sm-offset-3" style="margin-left:185px;">{{nls.hintforUser2}}<span id="currentBalanceHours"></span>{{nls.hintforUser3}}</div>
+				</div>
+				<div class="row form-group inputRow-overall">
+					<div class="col-sm-3 label-modal-overall" style="text-align:right;">
+						<div for="depositInput" class="control-label depositClass">{{nls.depositCredits}}: </div>
+						<div for="depositInput" class="control-label deductClass">{{nls.deductValue}}</div>
+					</div>
+					<div class="col-sm-8">
+						<span><input type="text" id="depositInput" class="form-control inputwithUnitClass" style="margin-right:10px;" autofocus required>{{nls.moneyType}}</span>
+					</div>
+				</div>
+				<div class="row form-group inputRow-overall" id="depositHintArea" style="display:none;">
+					<div class="col-sm-8 col-sm-offset-3">
+						<span class="depositClass" id="hintforUserDeposit">{{nls.hintforUserDeposit1}}</span>
+						<span class="deductClass" id="hintforUserDeduct">{{nls.hintforUserDeduct}}</span>
+						<span>{{nls.hintforUser2}}</span>
+						<span id="hintforSumHours"></span>
+						<span>{{nls.hintforUser3}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer modal-footer-overall">
+				<div class="row">
+					<div class="col-sm-6">
+						<button class="btn btn-primary btn-narrowModal" id="depositOKBtn">{{nls.OK}}</button>
+					</div>
+					<div class="col-sm-6">
+						<button class="btn btn-default btn-narrowModal" data-dismiss="modal">{{nls.Cancel}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

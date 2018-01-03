@@ -1,0 +1,29 @@
+<div class="admin-users-title" style="">
+    <div class="new_monitor_icon new_physicaler_icon"></div><h3 class="overall-heading">{{nls.physical}}</h3>
+</div>
+
+<div id="monitor_rack_all">
+    <div class="physical_room">
+        <ul class="physical_room_information">
+            <li><i>{{nls.room_name}}</i><span id="physical_room_name"></span></li>
+            <li><i>{{nls.room_posi}}</i><span id="physical_room_posi"></span></li>
+            <li><i>{{nls.room_nodes}}</i><span id="physical_room_nodes"></span></li>
+            <li><i>{{nls.room_energy}}</i><span id="physical_room_energy"></span></li>
+        </ul>
+        <div class="physical_room_chart" id="physical_room_chart"></div>
+    </div>
+    <div class='monitor_coll_body'>
+        <div class="monitor_coll_body_title rack_clear">
+            <select class="room_rack_title list_menu" id="list_menu">
+
+            </select>
+            <div class="room_rack_title"><b class="right_border">|</b><i>{{nls.room_rows_cont}}</i><span id="room_rows_rack" class='frame_num'></span></div>
+            <div class="room_rack_title"><b class="right_border">|</b><i>{{nls.room_rows_nodes}}</i><span id="room_rows_nodes" class='frame_num'></span></div>
+            <div class="room_rack_title"><i>{{nls.room_rows_energy}}</i><span id="room_rows_energy" class='frame_num'></span>W</div>
+        </div>
+        <div class='coll_content_body rack_clear'>
+            <div id='rows' class='coll_content '></div>
+        </div>
+    </div>
+</div>
+

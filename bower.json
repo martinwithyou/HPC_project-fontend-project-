@@ -1,0 +1,24 @@
+{
+  "name": "ceph",
+  "authors": [
+    "zhangtian3 <zhangtian3@lenovo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.16.4",
+    "blueimp-file-upload": "^9.12.5",
+    "echarts": "^3.2.3"
+  }
+}

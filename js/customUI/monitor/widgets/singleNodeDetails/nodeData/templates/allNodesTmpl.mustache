@@ -1,0 +1,114 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+
+
+<div  style="width:318px;height:62px;">
+    <div class="monitor_new_icon_title"></div>
+    <div  class="monitor_new_icon_title_charactor" id="node_data_hostname"></div>
+   
+</div>
+{{!新布局左半边部分开始}}
+   
+       
+      
+       
+       
+<div   style="width:360px;height:80px;float:left;margin-left:8px;margin-bottom:10px;">
+       
+       
+       <div style="width:280px;height:80px;border:1px solid #eeeeee;box-shadow: 0px 0px 20px #e2e2e2;float:right;">
+       
+              <div class="monitor_part_one" style="width:104px;text-align: center;color:8fe9a5;padding-top:17px;padding-right:5px;">
+                    <div  id="node_data_disk_total_gb" style="font-size:20px;color:#8fe9a5 !important;border-left:2px solid #dddddd;"></div>
+                    <div>{{nls.disk_total_gb}}</div>
+              </div>
+       
+             <div class="monitor_part_one" style="width:90px;text-align: center;padding-top:17px;">
+                  <div id="node_data_memory_total_kb" style="font-size:20px;color:#8fe9a5;"></div>
+                  <div>{{nls.memory_total_kb}}</div>
+             </div>
+       
+            <div class="monitor_part_one" style="width:70px;text-align: center;padding-top:17px;">
+                   <div id="node_data_processors_total" style="font-size:20px;color:#8fe9a5 !important;border-right:2px solid #dddddd;" ></div>
+                   <div>{{nls.cpu}}</div>
+             </div>
+       
+    
+        </div>
+       
+        <div class="monitor_part_one"  style="width:70px;text-align: center;float:left;" >
+       
+              <div  id="node_data_status_picture" style="width:16px;height:16px;background-color:#8fe9a5 !important;margin-top:6px;margin-left:10px;margin-right:5px;float:left;" ></div>
+              <div id="node_data_status" style="float:left;margin-top:5px;"></div>
+       
+        </div>
+       
+       
+       
+       
+       
+       
+       <div  class="monitor_modal_up_left_tr_3"  id="new_icon_monitor_turn_icon_out"  style="width:70px;margin-left:10px;">
+                  <div class="new_icon_monitor_turn_icon"></div><span class="new_icon_monitor_turn_character"></span>
+       </div>
+       
+       <div   class="monitor_modal_up_left_tr_3"  id="new_icon_monitor_WebKVM_out">
+                  <div class="new_icon_monitor_WebKVM"></div><span>{{nls.iConsole}}</span>
+       </div>
+       
+       <div    class="monitor_modal_up_left_tr_3"  id="new_icon_monitor_WebSSH_out" style="width:70px;">
+                  <div class="new_icon_monitor_WebSSH"></div><span>{{nls.SSH}}</span>
+        </div>
+        
+        
+        
+</div>
+{{!新布局左半边部分结束}}
+     
+   
+{{!新布局，右半边部分开始}}
+
+<div  style="width:240px;height:125px;float:right;margin-right:30px;padding-left:15px;">
+<div class="monitor_modal_up_left_row">
+     <div class="monitor_modal_up_left_tr_1" >{{nls.type}}：</div>
+     <div class="monitor_modal_up_left_tr_2" id="node_data_type" ></div>
+</div>
+
+
+<div class="monitor_modal_up_left_row">
+   <div class="monitor_modal_up_left_tr_1"  >{{nls.mgt_ipv4}}：</div>
+    <div class="monitor_modal_up_left_tr_2" id="node_data_mgt_ipv4" ></div>
+</div>
+
+
+<div class="monitor_modal_up_left_row">
+   <div class="monitor_modal_up_left_tr_1" >{{nls.bmc_ipv4}}：</div>
+   <div class="monitor_modal_up_left_tr_2" id="node_data_bmc_ipv4" ></div>
+</div>
+
+<div class="monitor_modal_up_left_row" >
+     <div class="monitor_modal_up_left_tr_1">{{nls.groups}}：</div>
+       <div class="monitor_modal_up_left_tr_2" id="node_data_groups"></div>
+</div>
+
+
+
+<div class="monitor_modal_up_left_row">
+    <div class="monitor_modal_up_left_tr_1">{{nls.machine_model}}：</div>
+     <div class="monitor_modal_up_left_tr_2" id="node_data_machine_model" ></div>
+</div>
+<div>
+{{!新布局，右半边部分结束}}
+
+
+
+      

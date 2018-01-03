@@ -1,0 +1,17 @@
+{ 
+    "ret": "success",
+    "msg": "",
+    "rows":[{
+    	"name":"1排",
+    	"row_index":1,
+    	"racks":["rackid1", "rackid2","rackid3", "rackid2","rackid3", "rackid2","rackid3", "rackid2","rackid3", "rackid2"]
+ 	},{
+    	"name":"2排",
+    	"row_index":"2",
+    	"racks":["rackid3", "rackid4","rackid5", "rackid2","rackid3", "rackid2","rackid3", "rackid2"]
+ 	},{
+    	"name":"3排",
+    	"row_index":"3",
+    	"racks":["rackid3", "rackid4","rackid5", "rackid2","rackid3", "rackid2","rackid3", "rackid2"]
+ 	}]
+}

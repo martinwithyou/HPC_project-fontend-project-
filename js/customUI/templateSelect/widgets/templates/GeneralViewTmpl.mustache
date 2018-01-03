@@ -1,0 +1,20 @@
+    	<!--general模板开始--->
+                  <form class="form-horizontal" role="form" >
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-label" for="job_name" id="general_jobName">{{nls.jobName}}</label>
+						<div class="col-md-4 " >
+							<input  class="form-control" type="text" id="job_name" >
+						</div>
+					</div></br>
+					<div class="form-group col-md-12" >
+						<label class="col-sm-2 control-label" for="job_file_input" id="general_jobFile">*{{nls.jobFile}}</label>
+						<div class="col-md-4">
+						    <input class="form-control" type="text" id="job_file_input_text" readonly placeholder="{{nls.pbs}}">
+						</div>
+						<div class="col-md-2">
+						    <button class="btn btn-primary" type="button"  id="job_file_select_btn">{{nls.browse}}</button>
+						</div>
+						<input type="file" id="job_file_input" style="display:none">
+					</div>
+         		</form>
+    	<!---general摸板结束--->

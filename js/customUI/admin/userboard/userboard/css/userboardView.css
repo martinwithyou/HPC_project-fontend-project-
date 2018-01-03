@@ -1,0 +1,86 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.admin-users-nav {
+	position:absolute;
+	height:90%;
+	float: left;
+	width: 10%;
+	background-color: #F2F2F2;
+	min-width: 140px;
+}
+
+.admin-users-main {
+	position:absolute;
+	left:10%;
+	width:90%;
+	height:90%;
+	float:left;
+	background-color:#ffffff;
+	padding-left: 20px;
+	overflow-y: auto;
+}
+
+ul.sidenav {
+	font-size: 16px;
+	float: left;
+	width:100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.sidenav li {
+	height: 60px;
+}
+
+ul.sidenav li a {
+	display: block;
+	color: #757575;
+	text-decoration: none;
+	width: 100%;
+	line-height: 60px;
+	padding: 0px 10px 0px 45px;
+}
+
+.admin-users-groups-mgt {
+	background:
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_supervisor_account_grey600_36x36.png')
+		no-repeat 5px center;
+}
+
+.admin-users-groups-mgt:hover {
+	background: white
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_supervisor_account_grey600_36x36.png')
+		no-repeat 5px center;
+}
+
+.admin-users-users-mgt {
+	background:
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_account_box_grey600_36x36.png')
+		no-repeat 5px center;
+}
+
+.admin-users-users-mgt:hover {
+	background: white
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_account_box_grey600_36x36.png')
+		no-repeat 5px center;
+}
+
+.admin-users-accounting-mgt {
+	background:
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_account_balance_wallet_grey600_36x36.png')
+		no-repeat 5px center;
+}
+
+.admin-users-accounting-mgt:hover {
+	background: white
+		url('/static/js/customUI/admin/userboard/userboard/img/ic_account_balance_wallet_grey600_36x36.png')
+		no-repeat 5px center;
+}

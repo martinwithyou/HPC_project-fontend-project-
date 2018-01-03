@@ -1,0 +1,58 @@
+        .div1 {
+            transform: translateX(-100px);
+        }
+        .cur .div1 {
+            transform: translateX(0);
+            animation: div1 1s;
+        }
+        @keyframes div1 {
+            0% {
+                transform: translateX(-100px);
+            }
+            50% {
+                transform: translateX(100px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .div2 {
+            transform: scale(0.5);
+        }
+        .cur .div2 {
+            transform: scale(1);
+            animation: div2 1s;
+        }
+        @keyframes div2 {
+            0% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(2);
+
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .div3 {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        .cur .div3 {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 1s;
+        }
+
+        .div4 {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        .cur .div4 {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s;
+        }

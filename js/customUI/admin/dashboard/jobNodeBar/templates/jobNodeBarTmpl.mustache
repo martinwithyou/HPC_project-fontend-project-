@@ -1,0 +1,37 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="col-lg-7 col-md-12 admin-jobCell" >
+	<div id="job_chart_admin"></div>
+</div>
+
+<div class="col-lg-5 col-md-12 admin-nodeCell" style="border:0px solid #ffffff;">
+	<div id="node_chart_admin" style="border:0px solid #ffffff;">
+		<div style="font-size:18px;font-weight:bold">{{nls.nodeSituation}} </div>
+		    
+		<div id="select_nodesOverview" style="width: 90%;">
+			<div class="top-label">
+				<div style="background-color: rgb(222, 222, 222)"></div>{{nls.offStatus}}
+			</div>
+			<div class="top-label">
+				<div style="background-color: rgb(143, 233, 165)"></div>{{nls.idleStatus}}
+			</div>
+			<div class="top-label">
+				<div style="background-color: rgb(253, 241, 0)"></div>{{nls.workingStatus}}
+			</div>
+			<div class="top-label">
+				<div style="background-color: rgb(255, 204, 0)"></div>{{nls.busyStatus}}
+			</div>
+			<canvas id="nodesOverview" height="300" width="500"></canvas>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,13 @@
+.select_title_1{width:100%;font-size:2rem;height:3rem;margin-top:1rem;}
+.select_select{float:left;border:1px solid #e9e9e9;background-color:#f2f2f2;height:2rem;}
+.select_nodes{float:left;background-color:#f2f2f2;height:2rem;}
+.select_part{width:100%;height:40px;border-bottom:1px solid #e9e9e9;cursor:pointer;font-size:13px;color:#333;background-color:#ffffff;}
+.select_part_general{width:100%;height:40px;border-bottom:1px solid #e9e9e9;cursor:pointer;font-size:13px;color:#333;background-color:#ffffff;}
+.select_info{height:15px;width:15px;margin-left:5%;margin-top:10px;float:left;background-color:#89B6DE;}
+.select_font{height:100%;width:85%;float:right;line-height:40px;}
+.select_info_general{height:15px;width:15px;margin-left:5%;margin-top:10px;float:left;background-color:#8FE9A5;}
+.select_font_general{height:100%;width:85%;float:right;line-height:40px;}
+.select_info_mpi{height:50%;width:9.5%;margin-left:5%;margin-top:15px;float:left;background-color:#8FE9A5;}
+.select_font_mpi{height:100%;width:80%;float:right;line-height:60px;}
+.select_info{background-image: url(../resource/template_icon_1.png);}
+.select_info_general{background-image: url(../resource/template_icon_2.png);}

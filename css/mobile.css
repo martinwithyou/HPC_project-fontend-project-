@@ -1,0 +1,143 @@
+body{
+	background-color:#f2f2f2;
+}
+.login-title{
+	width:100%;
+	height:300px;
+	background-image:url(img/m_login.JPG) ;
+	background-size:cover;
+}
+.footer_part{
+	width:25%;
+	height:100%;
+	border-right:1px solid #d9d9d9;
+	float:left;
+}
+.footer_part:hover{
+	box-shadow: 0 0 5px #666666;
+}
+.footer_part_up{
+	width:30px;
+	height:50%;
+	margin-left:35% ;
+}
+.footer_part_down{
+	width:100%;
+	height:50%;
+	line-height:30px;
+	color:#003366;
+	text-align: center;
+}
+.footer_part_up_document{
+	background-image:url(img/icon/down_0@2x.png);
+	background-size: cover;
+}
+.footer_part_up_load{
+	background-image:url(img/icon/up_0@2x.png);
+	background-size: cover;
+}
+.footer_part_up_monitor{
+	background-image:url(img/icon/monitor_0@2x.png);
+	background-size: cover;
+}
+.footer_part_up_setting{
+	background-image:url(img/icon/person_0@2x.png);
+	background-size: cover;
+}
+.monitor_top_right{
+	background-image: url(img/check.png);
+	background-size: cover;
+}
+.monitor_top_right_a{
+	background-image: url(img/HOSTS.png);
+	background-size: cover;
+}
+.monitor_top_right_b{
+	background-image: url(img/HEALTH.png);
+	background-size: cover;
+}
+.monitor_top_right_c{
+	background-image: url(img/IOPS.png);
+	background-size: cover;
+}
+.monitor_top_right_d{
+	background-image: url(img/MON.png);
+	background-size: cover;
+}
+.monitor_top_right_e{
+	background-image: url(img/OSD.png);
+	background-size: cover;
+}
+.monitor_top_right_f{
+	background-image: url(img/PG_STATUS.png);
+	background-size: cover;
+}
+.monitor_top_right_g{
+	background-image: url(img/POOLS.png);
+	background-size: cover;
+}
+.monitor_top_right_h{
+	background-image: url(img/USAGE.png);
+	background-size: cover;
+}
+#only_picture{
+	background-image:url(img/picture.png) ;
+	/*background-color: #000000;*/
+}
+
+.div6{
+	margin:0 auto ;
+	width:90%;
+	height:50px;
+	background-color: #1d5b98;
+	position: relative;
+	top:30px;
+	border-radius:10px;
+	box-shadow: 0 0 10px #1d5b98;
+	color:#ffffff;
+	text-align:center ;
+	line-height:50px;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+#fileupload{
+	margin:0 auto ;
+	width:90%;
+	height:50px;
+	background-color: #ffffff;
+	position: relative;
+	top:30px;
+	border-radius:10px;
+	/*border:1px solid #1d5b98;
+	box-shadow: 0 0 10px #1d5b98;*/
+	color:#ffffff;
+	text-align:center ;
+	line-height:50px;
+	font-size: 26px;
+	font-family: "微软雅黑";
+}
+.monitor_health{
+	width:100%;
+	height:80px;
+	/*border:1px solid red; */
+	float:left;
+	font-size:36px;
+	color:#737373;
+	text-align: center;
+	line-height:80px;
+	margin-top:10px;
+}
+.monitor_health_des{
+	float:left;
+	width:100%;
+	height:20px;
+	text-align: center;
+	line-height:20px;
+	color:#737373;
+}
+
+.mo_doc{
+	width:90px !important;
+	height:90px !important;
+	background-image:url(img/mo_docu.png) ;
+}

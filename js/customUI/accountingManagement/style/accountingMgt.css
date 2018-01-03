@@ -1,0 +1,115 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+#accountingGrid tr td:first-child {
+	text-align: center;
+}
+
+#accountingGrid  tr td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/default.png');
+	/*content:"\f10c";*/ /* fa-circle-o */
+	/*content: "\f096";*/ /* fa-square-o */
+	/*font-family: FontAwesome;*/
+}
+
+#accountingGrid  tr.selected td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/check.png')
+		!important;
+	/*content:"\f05d";*/ /* fa-check-circle-o */
+	/*content: "\f046";*/ /* fa-check-square-o */
+}
+
+#accountingGrid  tr:hover td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/hover.png');
+}
+
+.dt-center {
+	text-align: center;
+}
+
+.overall-padding {
+	padding-top: 20px;
+}
+
+.msgIconClass {
+	position: fixed;
+	margin-top: -9px;
+}
+
+.inputwithUnitClass {
+	width: 200px;
+	display: inline-block;
+}
+
+.billGroupInput {
+	width: 300px;
+	margin-left: 7px;
+	display: inline-block;
+}
+
+.modal-footer-overall {
+	margin-bottom: 15px;
+	border-top: none;
+}
+#accountingGrid_length{
+	width:30%;
+	
+	float:left;
+}
+#accountingGrid_filter{
+	width:30%;
+	
+	float:right;
+}
+#accountingGrid_info{
+	width:30%;
+	
+	float:left;
+}
+#accountingGrid_paginate{
+	width:30%;
+	
+	float:right;
+}
+.admin-users-title{
+	width:100%;
+	
+}
+.new_accounting_icon{
+	width:24px;
+	height:24px;
+	margin-top:18px;
+	margin-right:8px;
+    background-image: url('/static/js/customUI/admin/userboard/userboard/img/ic_account_balance_wallet_grey600_36x36.png');
+	float:left;
+}
+.new_group_icon{
+	width:24px;
+	height:24px;
+	margin-top:18px;
+	margin-right:8px;
+	background-image: url('/static/js/customUI/admin/userboard/userboard/img/ic_account_box_grey600_36x36.png');
+	float:left;
+}
+.new_user_icon{
+	width:24px;
+	height:24px;
+	margin-top:18px;
+	margin-right:8px;
+	background-image: url('/static/js/customUI/admin/userboard/userboard/img/ic_supervisor_account_grey600_36x36.png');
+	float:left;
+}
+.admin-users-title{
+	border-bottom:1px solid #eeeeee;
+
+	margin-bottom: 20px;
+}

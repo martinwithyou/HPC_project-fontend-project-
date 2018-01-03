@@ -1,0 +1,7 @@
+{
+    "ret":"success",
+    "msg":"",
+	"current": "200,100",
+	"total": "",
+	"history": [{"time":1470816000,"value":"70,16"},{"time":1470816030,"value":"50,10"}]
+}

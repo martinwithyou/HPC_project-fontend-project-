@@ -1,0 +1,141 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="admin-users-title" style="margin-bottom:0px;padding-left:20px;padding-right:20px;border:0px solid #eeeeee;">
+   <div style="width:100%;height:100%;border-bottom:1px solid #eeeeee;">
+		 <div class="new_monitor_icon new_list_icon"></div><h3 class="overall-heading">{{nls.listview}}</h3>
+	</div>	 
+
+</div>
+{{!节点列表开始}}
+<div class="group-glist">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="mb16">
+				<div class="btn-group">
+					<button class="btn btn-primary" id="g_shutup" disabled>
+						<span class="g_icon g_row_power_on"></span> {{nls.monitor_turn_on}}</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" id="g_shutdown" disabled>
+						<span class="g_icon g_row_power_off"></span> {{nls.monitor_turn_off}}</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" id="g_kvm" disabled>
+						<span class="g_icon g_row_kvm"></span> {{nls.monitor_WebKVM}}</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" id="g_ssh" disabled>
+						<span class="g_icon g_row_ssh"></span> {{nls.monitor_WebSSH}}</button>
+				</div>
+			</div>
+			<div class="dataTable_wrapper" id="listNodesTable_wrapper_only" style="margin-top:10px;width:100%;">
+				<table class="table table-striped table-hover" style="width:100%;" id="gListTable"></table>
+			</div>
+			<div class="g_select_all" id="g_select_all"></div>
+		</div>
+	</div>
+</div>
+{{!节点列表结束}}
+
+
+{{!第四版布局节点详细信息开始}}
+<div class="modal" id="fourth_mymodal" aria-hidden="true" data-backdrop="static" data-keyboard="true" style="display: none;" >
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:720px;height:720px;position:relative;left:-80px;">
+    		<div class="modal-header" style="border-bottom:0px solid #ffffff;">
+				<button type="button" class="close" id="monitor_modal_close_button" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title"></h4>
+			</div>
+<div class="modal-body" id="monitor_body_total"   style="padding-top:0px;padding-bottom:0px;">
+{{!***********************************************************************************************************************}}
+<div id="monitor_body_up" style="width:100%;height:190px;border:0px solid #0000ff;">
+</div>
+
+<div id="monitor_body_down" style="width:100%;height:500px;border:0px solid #00ff00;margin-top:20px;">
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default" style="margin-top:0px">
+            <div class="panel-heading">
+                <a style=" font-size:16px;color: rgb(0, 0, 0);" id="monitor_history_btn" href="javascript:void(0)"><span>{{nls.monitor}}</span>&nbsp;</a>&nbsp;&nbsp;&nbsp;
+                <span>|</span>
+                &nbsp;&nbsp;&nbsp;<a style=" font-size:16px;color: rgb(51, 122, 183);" id="monitor_job_btn" href="javascript:void(0)"><span>{{nls.job}}</span>&nbsp;</a>
+              
+        
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body" id="history-tab-panel" hide="" style="display:block;height:420px;border:0px solid #ff0000;padding:0px;">
+                     <div class="monitor_history_period" style="width:686px;height:25px;margin-top:10px;padding-left:8px;border:0px solid #00ff00;">
+                                                <div class="monitor_the_time_of_choice_title" style="line-height:25px;font-weight:100;float:left;">{{nls.select_time}}：</div>
+                                                <div class="monitor_the_time_of_choice_body" id="monitor_the_time_of_choice_body" style="float:left;">
+                                                   <select id="monitor_the_time_of_choice" >
+                                                     <option data-period="past_hour" value="hour">{{nls.hour}}</option>
+                                                     <option data-period="past_day" value="day">{{nls.day}}</option>
+                                                     <option data-period="past_week" value="week">{{nls.seven}}</option>
+                                                     <option data-period="past_month" value="month">{{nls.month}}</option>
+                                                   </select>
+                                                </div> 
+                    </div>
+                   <div id="history-tab-panel_up" style="width:686px;height:115px;border:0px solid #00ff00;"></div>
+                   <div id="history-tab-panel_down" style="width:686px;height:260px;border:0px solid #0000ff;"></div>
+                   <div id="history-tab-panel_running_jobs"  style="height:420px;width:686px;overflow:auto;display:none;"></div>
+            </div>
+            
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /#page-wrapper -->
+
+
+</div>
+
+
+{{!***********************************************************************************************************************}}			
+
+</div>
+			
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+{{!第四版布局节点详细信息结束}}
+
+
+
+	
+<div id="modalShow"></div>
+
+
+
+
+{{!不同时间段的数据刷新的开关}}
+<div id="different_time_period">
+   
+</div>
+{{!不同时间段的数据刷新的开关}}
+
+{{!不同task数据刷新的开关}}
+<div id="different_part_task">
+  
+</div>
+{{!不同task数据刷新的开关}}
+
+{{!单节点硬件信息刷新开关}}
+<div id="monitor_body_up_outter"></div>
+{{!单节点硬件信息刷新开关}}
+
+{{!全量获取失败开关}}
+<div id="history-tab-panel_down_outter"></div>
+{{!全量获取失败开关}}

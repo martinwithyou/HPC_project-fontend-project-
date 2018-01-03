@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div id="mpi" lico-job="mpi" lico-language="zh">
+  <section class="col-md-12">
+    <div class="col-md-12 select_title">环境参数</div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*作业名</span>
+      <div class="ajax col-md-4" id="jobname" lico-type="input" require="true" validate="jobName">
+        <input class="form-control" name="jobname" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*工作目录</span>
+      <div class="ajax col-md-4" id="workingdir" lico-type="folder" require="true">
+        <input class="form-control" disabled="disabled" placeholder="点击“浏览”选择工作目录" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="folder" type="button">浏览</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">MPI环境文件</span>
+      <div class="ajax col-md-4" id="mpi_env_file" lico-type="file">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="file" type="button">浏览</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">MPI运行参数</span>
+      <div class="ajax col-md-4" id="mpi_run_arguments" lico-type="input">
+        <input class="form-control" name="mpi_run_arguments" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*MPI程序</span>
+      <div class="ajax col-md-4" id="mpi_prog" lico-type="file" require="true">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="file" type="button">浏览</button>
+      </div>
+    </div>
+  </section>
+</div>

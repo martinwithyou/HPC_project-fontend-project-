@@ -1,0 +1,275 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+
+    <div class="modal fade" id="progressDialog_off" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-overall">
+			<div class="g-alert-box">
+				<div class="state_off">
+				</div>
+				<div class="g-close" type="button" class="close" data-dismiss="modal" aria-hidden="true">x
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    <div class="modal fade" id="progressDialog_on" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-overall">
+			<div class="g-alert-box">
+				<div class="state_on"></div>
+				<div class="g-close" type="button" class="close" data-dismiss="modal" aria-hidden="true">x
+				</div>
+			</div>
+		</div>
+   </div>
+
+{{!加载模态框开始}}
+	<div class="modal fade" id="progressDialog" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top:150px;width:300px">
+			<div class="modal-content">
+				 <p style="text-align:center;margin-top:30px;margin-bottom:30px"><img src="/static/js/customUI/user/dashboard/job/resources/loading.gif" id="loading_img"></div></p>
+			</div>
+		</div>
+	</div>
+{{!加载模态框结束}}
+
+
+
+
+{{!结果模态框开始}}
+   <div class="modal fade" id="progressDialog_1" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top:200px;">
+			<div class="modal-content" style="width:500px;height:50px;background-color:#ffffff;font-size:14px;text-align:center;line-height:50px;">
+				<div style="width:36px;height:36px;float:left;margin-left:20px;"><img src="/static/js/customUI/user/dashboard/job/resources/ic_check_green_36x36.png"></img></div>
+				<span id="the_result_of_operation"></span>{{nls.operation_successfully}}
+				<button style="margin:15px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			</div>
+		</div>
+	</div>
+{{!结果模态框结束}}
+
+
+
+{{!结果模态框开始}}
+   <div class="modal fade" id="progressDialog_4" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top:200px;">
+			<div class="modal-content" style="width:500px;height:50px;background-color:#ffffff;font-size:14px;text-align:center;line-height:50px;">
+				<div style="width:36px;height:36px;float:left;margin-left:20px;"><img src="/static/js/customUI/user/dashboard/job/resources/ic_clear_red_36x36.png"></img></div>
+				<span id="the_result_of_operation_close"></span>{{nls.operation_error}}
+				<button style="margin:15px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			</div>
+		</div>
+	</div>
+{{!结果模态框结束}}
+
+
+
+
+<div class="modal fade" id="g_powonrow_modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOn_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOnRow_one">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<div class="modal fade " id="g_powoffrow_modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOff_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOffRow_one">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+
+	
+<div class="modal fade" id="g_powonrow_modal_sigle" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOn_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOnRow_one_sigle">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+	
+	
+	<div class="modal fade " id="g_powoffrow_modal_sigle" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOff_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOffRow_one_sigle">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+		
+<div class="modal fade" id="g_powonrow_modal_sigle_model" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOn_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOnRow_one_sigle_model">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+	
+	
+	<div class="modal fade " id="g_powoffrow_modal_sigle_model" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall">
+					<h4 class="modal-title">{{nls.are_you_sure_turnOff_those_nodes}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12" id="deleteGroupMsg"></div>
+						<div class="col-sm-12 tips-header"></div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmPowerOffRow_one_sigle_model">确定</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

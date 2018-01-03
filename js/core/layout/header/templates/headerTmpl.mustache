@@ -1,0 +1,231 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<!-- Navigation -->
+<nav id="ui-navigation-header" class="navbar navbar-default navbar-static-top" role="navigation">
+    <span>
+        <!--button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button-->
+        <a id="ui-header-brand" class="navbar-brand" href="#"><span><img class="logo-img" src="/static/js/core/layout/header/img/new_lico_logo_1.png"></span></a>
+    </span>
+    <a id="ui-header-home" class="navbar-menu-link" href="/#admin">
+    <div class="navbar-menu-wrapper">
+        <span class="navbar-menu">
+        <img src="/static/js/core/layout/header/img/ic_home_white_36x36.png">
+        <span class="navbar-menu-text">{{nls.homePage}}</span>
+        </span>
+    </div>
+    </a>
+    
+
+
+
+{{!新的用户管理开始}}
+<div id="ui-header-users" class="dropdown navbar-menu-wrapper"  >
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="navbar-menu">
+        <img src="/static/js/core/layout/header/img/ic_supervisor_account_white_36x36.png">
+        <span class="navbar-menu-text">{{nls.users}}</span>
+        </span>
+      </a>
+      <ul class="dropdown-menu">
+         <li>
+              <a href="/#admin/user/groupsManagement">
+              <div class="new_user_group_icon"></div>  
+              <div class="new_select_character">{{nls.userOSGroup}}</div>
+              </a>
+         </li>
+         <li  class="divider"></li>
+         <li>
+            <a href="/#admin/user/userManagement">
+            <div class="new_user_user_icon"></div>
+            <div class="new_select_character">  {{nls.users}}</div>
+            </a>
+         </li>
+         <li  class="divider"></li>
+         <li>
+            <a href="/#admin/user/accountingManagement">
+            <div class="new_user_counting_icon"></div>                      
+            <div class="new_select_character"> {{nls.accountingGroup}}</div>
+            </a>
+          </li>
+      </ul>
+</div>   
+{{!新的用户管理结束}}  
+
+{{!新增监控部分开始}}
+<div id="ui-header-resource" class="dropdown navbar-menu-wrapper">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="navbar-menu">
+        <img src="/static/js/core/layout/header/img/monitor36.png">
+        <span class="navbar-menu-text">{{nls.monitor}}</span>
+        </span>
+      </a>
+      <ul class="dropdown-menu">
+         <li>
+             <a href="/#admin/monitor/list">
+             <div class="new_lister_icon"></div>   
+             <div class="new_select_character">{{nls.list}}</div>
+             </a>
+         </li>
+         <li  class="divider"></li>
+         <li>
+             <a href="/#admin/monitor/physical">
+              <div class="new_physical_icon"></div>   
+             <div class="new_select_character">{{nls.physical}}</div>
+             </a>
+         </li>
+         <li  class="divider"></li>
+         <li>
+             <a href="/#admin/monitor/group">
+             <div class="new_cluster_icon"></div>   
+             <div class="new_select_character">{{nls.group}}</div>
+             </a>
+         </li>
+      </ul>
+</div>
+{{!新增监控部分结束}}
+
+{{!vnc部分开始}}
+<div id="ui-header-sessions" class="dropdown navbar-menu-wrapper">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="navbar-menu">
+        <img src="/static/js/core/layout/header/img/clusterManagement36.png">
+        <span class="navbar-menu-text">{{nls.cluster}}</span>
+        </span>
+      </a>
+      <ul class="dropdown-menu">
+         <li>
+             <a href="/#admin/vncsessions">
+             <div class="new_sessions_icon"></div>
+             <div class="new_select_character"> {{nls.sessions}}</div>
+             </a>
+        </li>
+      </ul>
+</div>
+{{!vnc部分结束}}
+
+    <!-- /.navbar-header -->
+    <div class="nav-bar-items dropdown personalInfoCard">
+        <div class="dropdown-toggle personalInfoCard" data-toggle="popover" tabindex="0">
+            <a id="personalCenter">
+                <div class="profile-wrapper personalInfoCard">
+                    <img class="personalInfoCard" data-toggle="popover" src="/static/js/core/layout/header/img/ic_account_circle_white_30x30.png">
+                    <div class="profile-text personalInfoCard">{{nls.personalCenter}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="nav-bar-items" id="user-file-management-wrapper">
+        <a id="user-file-management">
+            <div class="profile-wrapper">
+                <img src="/static/js/core/layout/header/img/ic_folder_open_white_30x30.png">
+                <div class="profile-text">{{nls.fileManagement}}</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="nav-bar-items" id="user-session-info-wrapper">
+        <a id="user-session-info">
+            <div class="profile-wrapper">
+                <img src="/static/js/core/layout/header/img/session_30x30.png" class="admin-links-area">
+                <div class="profile-text">{{nls.sessionInfo}}</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="nav-bar-items admin-links-area" id="admin-links-wrapper">
+        <a id="admin-links">
+            <div class="profile-wrapper admin-links-area">
+                <img src="/static/js/core/layout/header/img/ic_insert_link_white_30x30.png" class="admin-links-area">
+                <div class="profile-text admin-links-area">{{nls.links}}</div>
+            </div>
+        </a>
+    </div>
+    <div id="linkPopoverContent" style="display:none;">
+        <div class="hover-card-content linkPopoverContentClass" style="padding:0px;">
+        
+            <div class="linkDiv returnToUserLink upperLinkArea">
+                <div id="returntoUser">{{nls.returntoUser}}</div>
+            </div>
+            
+            <div id="linkforGanglia" class="linkDiv viewDetailsLink" style="border-bottom:1px solid #d9d9d9;">
+               <div style="display:inline-block;float:left;">
+                    <span style="display:block">{{nls.viewMonitoringDetails}}</span>
+                    <span style="display:block">Ganglia</span>
+                </div>
+                <div style="display:inline-block;float:right;">
+                    <div class="linkImg"></div>
+                </div>      
+            </div>
+         
+            
+            <div id="linkforNagios" class="linkDiv viewDetailsLink" style="border-bottom:1px solid #d9d9d9;">
+                <div style="display:inline-block;float:left;">
+                	<span style="display:block">{{nls.viewAlarmDetails}}</span>
+                    <span style="display:block">Nagios</span>
+                </div>
+                <div style="display:inline-block;float:right;">
+                    <div class="linkImg"></div>
+                </div>                
+            </div>
+           
+            <div  class="linkDiv viewDetailsLink" style="padding-top:13px;display: none;">
+                  <div id="AwesomeManager" >lenovo AwesomeManage</div>          
+            </div>
+        </div>
+    </div>
+    <div id="popoverContent" style="display:none;">
+        <div class="hover-card-content linkPopoverContentClass">
+            <div class="row pcHoverCardRow">
+                <div class="col-sm-12 profile-label personalCenterFontClass currentUserNameClass">
+                    <p id="currentUserName"></p>
+                </div>
+            </div>
+            <div class="row pcHoverCardRow">
+                <div class="col-sm-12 profile-label personalCenterFontClass">{{nls.userOSGroup}}: <span id="userOSGroup" class="groupValueClass"></span></div>
+
+            </div>
+            <div class="row pcHoverCardRow">
+                <div class="col-sm-12 profile-label personalCenterFontClass">{{nls.accountingGroup}}: <span id="accountingGroup" class="groupValueClass"></span></div>
+
+            </div>
+        </div>
+        <div class="hover-card-options-wrapper">
+            <button class="btn btn-default btn-hc btn-left personalCenterFontClass" id="changePwd">{{nls.changePassword}}</button>
+            <button class="btn btn-default btn-hc btn-right personalCenterFontClass" id="logout">{{nls.exit}}</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirm-logout" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+        <div class="modal-dialog" style="margin-top:10%">
+            <div class="modal-content col-sm-10">
+                <div class="modal-body">
+                    <h4>{{nls.logoutConfirmation}}</h4>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-narrowModal" id="confirmLogoutBtn">{{nls.OK}}</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-default btn-narrowModal" data-dismiss="modal">{{nls.Cancel}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

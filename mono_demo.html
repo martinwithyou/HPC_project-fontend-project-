@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mono_demo</title>
+		
+		
+	</head>
+	<body>
+		<div>
+			<canvas id="monoCanvas"></canvas>
+		</div>
+		<script src="js/lib.js"></script>
+		<script>
+		    function init(){
+            //创建数据容器，容纳所有3d对象
+            var box = new mono.DataBox();
+            //创建3d画布，显示3d场景。monoCanvas是html页面中canvas标签对象的id值
+            var network= new mono.Network3D(box, null, monoCanvas);
+            //当页面调整大小时，自动调整network画布宽度，铺满整个页面
+            mono.Utils.autoAdjustNetworkBounds(network,document.documentElement,'clientWidth','clientHeight');
+ 
+            //在坐标1000、1000、1000处放置一个颜色为0xFFFFFF色、强度为1.5的点光源
+            var pointLight = new mono.PointLight(0xFFFFFF,1.5);
+            pointLight.setPosition(1000,1000,1000);
+            box.add(pointLight);
+            //在场景中增加颜色为0x888888的环境光
+            box.add(new mono.AmbientLight(0x888888));
+ 
+            //创建一个大小为200、200、200的立方体
+            var cube = new mono.Cube(200, 200, 200);
+            //设置立方体材质、颜色等样式
+            cube.s({
+                'm.type': 'phong',
+                'm.color': 'red',
+                'm.ambient': 'red'
+            });
+            //设置立方体在x、y、z轴向的旋转角度
+            cube.setRotation(-Math.PI/10, -Math.PI/5, Math.PI/10);
+ 
+            //将立方体置入databox数据容器进行显示
+            box.add(cube);
+        }
+		    init();
+		</script>
+	</body>
+</html>

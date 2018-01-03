@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<div id="testAnsys" lico-job="testAnsys">
+  <section class="col-md-12">
+    <div class="col-md-12 select_title">Environment Paramenters</div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Job Name</span>
+      <div class="ajax col-md-4" id="jobname" lico-type="input">
+        <input class="form-control" name="jobname" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Run Mode</span>
+      <div class="ajax col-md-4" id="runMode" lico-type="checkbox">
+        <label class="checkbox-inline">
+          <input lico-directive="click:disable(#custom,#fileType)" name="runMode" type="checkbox" value="GUI">GUI</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Parallel Mode</span>
+      <div class="ajax col-md-4" id="paraMode" lico-type="radio">
+        <label class="radio-inline">
+          <input name="paraMode" type="radio" value="MPP">MPP</input>
+        </label>
+        <label class="radio-inline">
+          <input checked="checked" name="paraMode" type="radio" value="SMP">SMP</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Remote Shell</span>
+      <div class="ajax col-md-4" id="remoteShell" lico-type="radio">
+        <label class="radio-inline">
+          <input name="remoteShell" type="radio" value="RSH">RSH</input>
+        </label>
+        <label class="radio-inline">
+          <input checked="checked" name="remoteShell" type="radio" value="SSH">SSH</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">*ANSYS Bin</span>
+      <div class="ajax col-md-4" id="ansysDir" lico-type="file">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default" lico-link="file" type="button">browse</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">*Working DIR</span>
+      <div class="ajax col-md-4" id="workDir" lico-type="folder">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default" lico-link="folder" type="button">browse</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Arguments</span>
+      <div class="ajax col-md-4" id="ansysArguments" lico-type="input" validate="string">
+        <input class="form-control" name="ansysArguments" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">*MPI Type</span>
+      <div class="ajax col-md-4" id="mpiType" lico-type="select">
+        <select class="col-md-4 form-control" name="mpiType">
+          <option checked="checked" value="default">default</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <section class="col-md-12">
+    <div class="col-md-12 select_title">Run Paramenters</div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">File Type</span>
+      <div class="ajax col-md-4" id="fileType" lico-type="radio">
+        <label class="radio-inline">
+          <input name="fileType" type="radio" value="DB">DB</input>
+        </label>
+        <label class="radio-inline">
+          <input checked="checked" name="fileType" type="radio" value="INP/CDB">INP/CDB</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2"/>
+      <div class="ajax col-md-4" id="custom" lico-type="checkbox">
+        <label class="checkbox-inline">
+          <input lico-directive="click:enable(#memory,#workspace)" name="custom" type="checkbox" value="Use custom memory settings">Use custom memory settings</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">*Input File</span>
+      <div class="ajax col-md-4" id="inputFile" lico-type="file">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default" lico-link="file" type="button">browse</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Database</span>
+      <div class="ajax col-md-4" id="memory" lico-directive="disable" lico-type="input" validate="number">
+        <input class="form-control" name="memory" type="text"/>
+      </div>
+      <span class="control-label select_unit col-md-1">MB</span>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">*output File</span>
+      <div class="ajax col-md-4" id="outputFile" lico-type="file">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default" lico-link="file" type="button">browse</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="control-label col-md-2">Total Workspace</span>
+      <div class="ajax col-md-4" id="workspace" lico-directive="disable" lico-type="input" validate="number">
+        <input class="form-control" name="workspace" type="text"/>
+      </div>
+      <span class="control-label select_unit col-md-1">MB</span>
+    </div>
+  </section>
+</div>

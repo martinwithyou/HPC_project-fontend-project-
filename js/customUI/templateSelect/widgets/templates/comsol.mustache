@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div id="comsol" lico-job="comsol" lico-language="zh">
+  <section class="col-md-12">
+    <div class="col-md-12 select_title">环境参数</div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*作业名</span>
+      <div class="ajax col-md-4" id="jobname" lico-type="input" require="true" validate="jobName">
+        <input class="form-control" name="jobname" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">运行模式</span>
+      <div class="ajax col-md-4" id="run_mode" lico-type="checkbox">
+        <label class="checkbox-inline">
+          <input lico-directive="checked:disable(#comsol_run_arguments,#comsol_input_file,#comsol_output_file),init(#comsol_run_arguments,#comsol_input_file,#comsol_output_file);unchecked:enable(#comsol_run_arguments,#comsol_input_file,#comsol_output_file)" name="run_mode" type="checkbox" value="GUI">GUI</input>
+        </label>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*工作目录</span>
+      <div class="ajax col-md-4" id="workingdir" lico-type="folder" require="true">
+        <input class="form-control" disabled="disabled" placeholder="点击“浏览”选择工作目录" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="folder" type="button">浏览</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*COMSOL</span>
+      <div class="ajax col-md-4" id="comsol_bin" lico-type="file" require="true">
+        <input class="form-control" disabled="disabled" placeholder="点击“浏览”选择COMSOL" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="file" type="button">浏览</button>
+      </div>
+    </div>
+  </section>
+  <section class="col-md-12">
+    <div class="col-md-12 select_title">运行参数</div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">COMSOL环境文件</span>
+      <div class="ajax col-md-4" id="comsol_env_file" lico-type="file">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="file" type="button">浏览</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">COMSOL运行参数</span>
+      <div class="ajax col-md-4" id="comsol_run_arguments" lico-type="input">
+        <input class="form-control" name="comsol_run_arguments" type="text"/>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">*输入文件</span>
+      <div class="ajax col-md-4" id="comsol_input_file" lico-type="file" require="true">
+        <input class="form-control" disabled="disabled" type="text"/>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-default" lico-link="file" type="button">浏览</button>
+      </div>
+    </div>
+    <div class="col-md-12 form-group">
+      <span class="select_label_overflow control-label col-md-2">输出文件</span>
+      <div class="ajax col-md-4" id="comsol_output_file" lico-type="input">
+        <input class="form-control" name="comsol_output_file" type="text"/>
+      </div>
+    </div>
+  </section>
+</div>

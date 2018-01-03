@@ -1,0 +1,120 @@
+.physical_clear:after {
+	　content:".";
+	　height:0;
+	　visibility:hidden;
+	　display:block;
+	　clear:both;
+}
+.new_physicaler_icon{
+	background-image: url(../../../../resource/physicalView36.png);
+}
+.physical_room{
+	box-sizing: border-box;
+	width: 100%;
+	height: 210px;
+	padding: 40px;
+	border:1px solid #e9e9e9;
+	border-radius: 5px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+
+.physical_room_information{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.physical_room_information li{
+	font-size: 18px;
+	height: 32px;
+	line-height: 32px;
+}
+.physical_room_information li i{
+	font-style: normal;
+}
+.physical_room_chart{
+	float: right;
+	width: 330px;
+	height: 100%;
+}
+
+.monitor_coll_body{
+	box-sizing: border-box;
+	width: 100%;
+	margin: 40px 0;
+	padding: 0 1%;
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	padding-bottom: 1%;
+	box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+.monitor_coll_body_title{
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	margin: 0;
+	border-bottom:1px solid #DCDCDC;
+	cursor: default;
+}
+.room_rack_title{
+	float: left;
+	min-width: 150px;
+	margin-right: 10px;
+	text-align: center;
+}
+.list_menu{
+	height: 35px;
+	font-size: 18px;
+	margin: 7.5px auto;
+	border: 1px solid #e9e9e9;
+	border-radius: 2px;
+	outline: none;
+}
+.right_border{
+	float: right;
+}
+.room_rack_title i{
+	font-style: normal;
+}
+.coll_content{
+	height: 300px;
+}
+.coll_content_body{
+	width: 100%;
+	overflow-y: auto;
+}
+.monitor_frame{
+	display: inline-block;
+	background: #f3f3f3;
+	border: 2px solid #cccccc;
+	border-top: 5px solid #585858;
+	border-bottom: 5px solid #585858;
+	margin: 28px 33px 0;
+	padding: 20px 0 0;
+	color: #000000;
+	cursor: pointer;
+}
+.monitor_frame:hover{
+	text-decoration: none;
+	color: #000000;
+}
+.monitor_frame ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.monitor_frame li{
+	width: 180px;
+    height: 24px;
+    line-height: 24px;
+    text-indent: 1em;
+    cursor: pointer;
+}
+.chart_rack{
+	width: 180px;
+	height: 130px;
+}
+#body{
+	overflow-x: inherit !important;
+}

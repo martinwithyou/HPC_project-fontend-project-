@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>自定义动画和动效</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+	<script type="text/javascript" src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+	<script type="text/javascript" src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+	<script type="text/javascript" src="bower_components/echarts/echarts.common.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        .div1 {
+            transform: translateX(-100px);
+        }
+        .cur .div1 {
+            transform: translateX(0);
+            animation: div1 1s;
+        }
+        @keyframes div1 {
+            0% {
+                transform: translateX(-100px);
+            }
+            50% {
+                transform: translateX(100px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .div2 {
+            transform: scale(0.5);
+        }
+        .cur .div2 {
+            transform: scale(1);
+            animation: div2 1s;
+        }
+        @keyframes div2 {
+            0% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(2);
+
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .div3 {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        .cur .div3 {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 1s;
+        }
+
+        .div4 {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        .cur .div4 {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1"  style="background-color:#0099ff !important;color:#ffffff !important;font-size:80px !important;">
+                <div class="div1">Welcome</div>
+            </div>
+            <div class="page page2" style="background-color:#0066ff !important;color:#ffffff !important;font-size:100px !important;">
+                <div class="div2">Use</div>
+            </div>
+            <div class="page page3" style="background-color:#0099ff !important;color:#ffffff !important;font-size:100px !important;">
+                <div class="div3">Lenovo</div>
+            </div>
+            <a  href='mobileIndex.html' style="text-decoration:none;">
+                <div  class="page page4" style="background-color:#ffffff !important;color:#ffffff !important;font-size:100px !important;" >
+                       <div class="div4" ></div>
+                        <div class="div6" id="mobile_login" >login</div>
+                       <div class="div5"></div>
+                       
+                      
+                </div>
+            </a>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/js.fullpage.js"></script>
+    <script>
+        document.getElementsByClassName('wp-inner')[0].fullpage({});
+    </script>
+    <script>
+    function setCookie(c_name,value,expiredays){
+                var exdate=new Date()
+                exdate.setDate(exdate.getDate()+expiredays)
+                document.cookie=c_name+ "=" +escape(value)+
+                ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+            }
+    	//login_validate("guest","1234abcd");
+//$("#mobile_login").click(function(){
+    		
+    $.ajax({
+		type:'POST',
+		url:'/api/login/',
+		data:JSON.stringify({
+			"user":"guest",
+			"pass":"1234abcd"
+		}),
+		success:function(data){
+			//userInit(user);
+			$.ajaxSetup({ 
+				cache: false, 
+				contentType : 'application/json',
+				beforeSend: function(xhr, settings) {
+					xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+				}
+			});
+			setCookie('username',"guest",1);
+			setCookie("X-CSRFToken", getCookie('csrftoken'),1);
+			//window.location.href="/static/mobileIndex.html?v="+Math.random();
+		},
+		error:function(data){
+			login_info("guest"+'出错了');
+		}
+	});
+//    	});
+    </script>
+</body>
+</html>

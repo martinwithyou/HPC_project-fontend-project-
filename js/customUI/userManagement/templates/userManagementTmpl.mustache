@@ -1,0 +1,105 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="container-fluid userViewArea" style="padding-left:20px;">
+	<div class="admin-users-title">
+		<div class="new_user_icon"></div><h3 class="overall-heading">{{nls.user}}</h3>		
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-toolbar" >
+				<div class="btn-group">
+					<button class="btn btn-primary" id="addUser">{{nls.addUser}}</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" id="deleteUser" disabled>{{nls.deleteUser}}</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" id="editUser" disabled>{{nls.editUser}}</button>
+					<!-- Advanced User Management Btns -->
+					<!-- removed in MVP version
+					<button class="btn btn-primary" id="importUsers">{{nls.importUser}}</button>
+					<button class="btn btn-primary" id="passwordSettings">{{nls.passwordSettings}}</button>
+					-->
+				</div>
+			</div>
+			<div class="dataTable_wrapper" style="margin-top:10px;width:100%;">
+				<table class="table table-striped table-hover" style="width:100%;" id="userGrid"></table>
+			</div>
+		</div>
+	</div>
+	<div id="userInfoModalID"></div>
+	<!-- Advanced Password Setting Modal -->
+	<!-- removed in MVP version
+	<div class="modal fade" role='dialog' id="passwordSettingModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">{{nls.passwordSettings}}</h3>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group form-inline">
+							<label for="initUniformPwd" class="col-sm-4 control-label">{{nls.initUniformPassword}}</label>
+							<input type="text" id="initUniformPwd" class="form-control passwordInput">
+							<label for="changePwdFirstLogin"><input type="checkbox" id="changePwdFirstLogin">{{nls.changePwdFirstLogin}}</label>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label">{{nls.userPwdRule}}</label>
+							<div>xxxxxxxxxxxxxx</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" id="pwdSettingOKBtn">{{nls.OK}}</button>
+					<button class="btn btn-default" id="pwdSettingCancelBtn">{{nls.Cancel}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<!-- end of Advanced Password Setting Modal -->
+	<div class="modal fade" id="confirmModal-deleteUser" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+		<div class="modal-dialog modal-overall">
+			<div class="modal-content modal-content-overall">
+				<div class="modal-header modal-header-overall" style="text-align:center;">
+					<h3>{{nls.confirmDeletion}}<span id="selectedUserName"></span>?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row" style="padding-left: 30px;">
+						<div class="col-sm-12">
+							<div id="deleteErrorMsg"></div>
+						</div>
+						<div class="col-sm-12 tips-header">{{nls.tipsHeaderforOperation}}:</div>
+						<div class="col-sm-12">
+							<ol class="tips-content">
+								<li>{{nls.tipsContent1}}</li>
+								<li>{{nls.tipsContent2}}</li>
+								<li>{{nls.tipsContent3}}</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-overall">
+					<div class="row">
+						<div class="col-sm-6">
+							<button class="btn btn-primary btn-narrowModal" id="confirmDeleteUser">{{nls.OK}}</button>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-default btn-narrowModal" data-dismiss="modal">{{nls.Cancel}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

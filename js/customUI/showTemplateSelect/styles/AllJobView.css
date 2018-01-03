@@ -1,0 +1,107 @@
+.select_sidebar{width:20%;height:705px;background-color:#ffffff;border:1px solid #e9e9e9;float:left;box-shadow: 0 0 5px rgba(0,0,0,.1);}
+#select_myModalLabel{font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;padding-left:16px;font-size:16px;text-align:left;background-color:#f2f2f2;width:100%;height:48px;line-height:48px;border-bottom:1px solid #e9e9e9;}
+.select_colllection{width:100%;height:86%;overflow:auto;border-bottom:0px solid #e9e9e9;}
+.select_mainContainer{width:80%;height:705px;background-color:#ffffff;float:left;}
+.select_head{width:100%;height:48px;background-color:#f2f2f2;font-size:3rem;color:#3C3C3C;border-bottom:1px solid #e9e9e9;}
+#select_foot{background-color:#f2f2f2;position: absolute;bottom: 0px;width:100%;height:48px;border-top:1px solid #e9e9e9;}
+#select_logo{margin-left:46px;margin-top:20px;margin-bottom:15px;width:200px;height:45px;}
+#select_head_title{width:200px;height:100%;line-height:48px;text-align:left;padding-left:30px;float:left;}
+#select_template_submit{float:left;width:100px;margin-left:35%;margin-top:0.5rem;}
+#select_template_reset{float:left;width:100px;background-color:#eee;margin-left:10%;border:1px solid #e9e9e9;margin-top:0.5rem;}
+
+
+/*@media only screen and (min-width: 1000px) and (max-width:1200px) {
+   .select_sidebar{
+		height:510px;
+	}
+   .select_mainContainer{
+   	    height:510px;
+   }
+   #select_mainContainer_top{
+   	   height:82% !important;
+   }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+   .select_sidebar{
+		height:705px;
+	}
+    .select_mainContainer{
+   	    height:705px;
+    }
+    #select_mainContainer_top{
+   	   height:88% !important;
+    }
+	#select_mainContainer_top_out{
+		overflow:auto;
+		width:100%;
+		height:93%;
+	}
+
+	
+}
+@media only screen and (min-width: 1601px) and (max-width:1750px) {
+   .select_sidebar{
+		height:800px;
+	}
+   .select_mainContainer{
+   	    height:800px;
+   }
+   #select_mainContainer_top{
+   	   height:88% !important;
+   }
+
+}
+@media only screen and (min-width: 1751px) and (max-width:1980px) {
+   .select_sidebar{
+		height:920px;
+	}
+   .select_mainContainer{
+   	    height:920px !important;
+   }
+   #select_mainContainer_top_out{
+   	   height:94.8%;
+   	   overflow: auto;
+   }
+   #select_mainContainer_top{
+   	   height:82% !important;
+   }
+
+}
+@media only screen and (min-width: 1981px) and (max-width:2480px) {
+   .select_sidebar{
+		height:1160px;
+   }
+   .select_mainContainer{
+   	    height:1160px;
+   }
+    #select_mainContainer_top{
+   	   height:92% !important;
+   }
+
+}
+
+@media only screen and (min-width: 2481px) and (max-width:2560px) {
+   .select_sidebar{
+		height:1320px;
+	}
+   .select_mainContainer{
+   	    height:1320px;
+   }
+   #select_mainContainer_top{
+   	   height:93% !important;
+   }
+
+}
+
+@media only screen and (min-width: 2561px) and (max-width:2880px) {
+   .select_sidebar{
+		height:1520px;
+	}
+   .select_mainContainer{
+   	    height:1520px;
+   }
+   #select_mainContainer_top{
+   	   height:94% !important;
+   }
+  
+}*/

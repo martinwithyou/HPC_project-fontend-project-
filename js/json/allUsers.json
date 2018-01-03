@@ -1,0 +1,30 @@
+[
+	{
+		"userName":"user1",
+		"role":"Administrator",
+		"group":"计算机系",
+		"email":"111@xxx.com",
+		"lastLoginTime":"10/24/2014"
+	},
+	{
+		"userName":"user2",
+		"role":"Administrator",
+		"group":"物理系",
+		"email":"112@xxx.com",
+		"lastLoginTime":"10/25/2014"
+	},
+	{
+		"userName":"user3",
+		"role":"Administrator",
+		"group":"数学系",
+		"email":"113@xxx.com",
+		"lastLoginTime":"10/24/2014"
+	},
+	{
+		"userName":"user4",
+		"role":"Administrator",
+		"group":"计算机系",
+		"email":"114@xxx.com",
+		"lastLoginTime":"10/25/2014"
+	}
+]

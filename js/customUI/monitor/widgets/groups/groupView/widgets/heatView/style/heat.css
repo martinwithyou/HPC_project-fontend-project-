@@ -1,0 +1,126 @@
+#body {
+	overflow-x:hidden;
+}
+.heat-btn {
+	max-width:70%;
+	margin:0 auto;
+}
+.mr40 {
+	margin-left:40px;
+}
+.heat_button {
+	margin-top:20px;
+}
+.heat_btn_item {
+	margin-right: 12px;
+	margin-bottom: 20px;
+}
+.heat_content {
+	width:70%;
+	margin:0 auto 20px auto;
+	min-height: 450px;
+	margin-bottom: 0
+}
+/*分页*/
+.group-pagination-box {
+	width:70%;
+	margin:0 auto;
+	overflow: hidden;
+}
+.group-pagination {
+	float: right;
+	margin:0 auto 10px auto;
+	border-radius: 4px;
+	-moz-user-select:none;
+	-webkit-user-select:none; 
+	-ms-user-select:none; 
+	-khtml-user-select:none; 
+	user-select:none;
+}
+
+.group-pagination>div {
+	float: left;
+}
+
+.group-pagination>div a, .group-pagination>div span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #337ab7;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd
+}
+
+.group-pagination>div:first-child a, .group-pagination>div:first-child>span {
+	margin-left: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+
+.group-pagination>div:last-child a, .group-pagination>div:last-child>span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px
+}
+
+.group-pagination>div a:focus, .group-pagination>div a:hover, .group-pagination>div>span:focus,
+	.group-pagination>div>span:hover {
+	color: #23527c;
+	background-color: #eee;
+	border-color: #ddd
+}
+
+.group-pagination div a.active,
+	.group-pagination>.active>span, .group-pagination>.active>span:focus, .group-pagination>.active>span:hover
+	{
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #337ab7;
+	border-color: #337ab7
+}
+
+.group-pagination a.disabled, .group-pagination a.disabled:focus, .group-pagination a.disabled:hover,
+	.group-pagination>.disabled>span, .group-pagination>.disabled>span:focus,
+	.group-pagination>.disabled>span:hover {
+	color: #777;
+	cursor: not-allowed;
+	background-color: #fff;
+	border-color: #ddd;
+	display: none;
+}
+
+.group-pagination-lg>div a, .group-pagination-lg>div>span {
+	padding: 10px 16px;
+	font-size: 18px
+}
+
+.group-pagination-lg>div:first-child a, .group-pagination-lg>div:first-child>span {
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px
+}
+
+.group-pagination-lg>div:last-child a, .group-pagination-lg>div:last-child>span {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px
+}
+
+.group-pagination-sm>div a, .group-pagination-sm>div>span {
+	padding: 5px 10px;
+	font-size: 12px
+}
+
+.group-pagination-sm>div:first-child a, .group-pagination-sm>div:first-child>span {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px
+}
+
+.group-pagination-sm>div:last-child a, .group-pagination-sm>div:last-child>span {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px
+}
+.group-pagination-item a {
+	width:38px;
+}

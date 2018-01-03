@@ -1,0 +1,246 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.navbar-menu{
+	width:100%;
+}
+.popover-content {
+	padding: 0px;
+	border-color: blue;
+	border-width: 2px;
+}
+
+.hover-card-content {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	padding: 1em 0 1em;
+}
+
+.groupValueClass {
+	padding-left: 10px;
+}
+
+.pcHoverCardRow {
+	padding-left: 20px;
+	height: 40px;
+}
+
+.currentUserNameClass {
+	font-weight: bold;
+}
+
+.hover-card-content .desc, .profile-label {
+	letter-spacing: 0.05rem;
+}
+
+.personalCenterFontClass {
+	font-size: 14px;
+	font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+.hover-card-options-wrapper {
+	position: relative;
+	display: block;
+	width: 250px;
+	float: left;
+	background: #F2F2F2;
+	padding: 0 .5em;
+	clear: both;
+	height: 50px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.btn-hc {
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+
+.btn-narrowModal {
+	width: 50%;
+	margin-right: 25%;
+}
+
+.btn-left {
+	float: left;
+	margin-left: 25px;
+}
+
+.btn-right {
+	float: right;
+	margin-right: 25px;
+}
+
+#currentUserName {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.popover {
+	border: 1px solid #1E90FF;
+}
+
+#wrapper .popover.bottom>.arrow {
+	border-bottom-color: #1E90FF;
+}
+
+.ui-logo-text {
+	font-size: 34px;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.logo-img {
+	position: relative;
+	left: 5px;	
+	top:3px;
+}
+
+.profile-text {
+	font-size: 12px;
+}
+
+.navbar-menu {
+	display: inline-block;
+	line-height: 60px;
+	height: 60px;
+	font-size: 20px;
+	font-weight: 400;
+	color: white;
+}
+
+.navbar-menu-text {
+	position: relative;
+	top: 2px;
+}
+
+.navbar-menu-wrapper {
+    padding: 0 40px;
+    float: left;
+    text-align: center;
+}
+
+.navbar-menu-wrapper:hover {
+	background-color: #808080;
+}
+
+.linkPopoverContentClass {
+	width: 220px;
+}
+
+.linkDiv {
+	padding-left: 10px;
+	height: 60px;
+}
+
+.returnToUserLink {
+	line-height: 60px;
+	vertical-align: middle;
+	color: #000000;
+}
+
+.returnToUserLink:hover, .viewDetailsLink:hover {
+	color: #FFFFFF;
+	background-color: #66CCFF;
+}
+
+.viewDetailsLink {
+	line-height: 30px;
+	vertical-align: middle;
+	color: #000000;
+}
+
+.linkImg {
+	background-image:
+		url('/static/js/core/layout/header/img/ic_launch_white_36.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 60px;
+}
+
+.upperLinkArea {
+	border-bottom: 1px #DDD solid;
+}
+.dropdown-menu{
+	background-color: #666666;
+	color:#ffffff;
+}
+.dropdown-menu li{
+	width:158px;
+	height: 26px;
+}
+.dropdown-menu li a{ 
+   color:#ffffff !important;
+ }
+ .dropdown-menu li a:hover{
+   color:#ffffff !important;
+   background-color:#666666 !important;
+ }
+.new_lister_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+	background-image: url(../img/listView16.png);
+	float:left;
+}
+.new_cluster_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+	background-image: url(../img/groupView16.png);
+	float:left;
+}
+.new_physical_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+	background-image: url(../img/physicalView16.png);
+	float:left;
+}
+.new_user_user_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+     background-image:url(../img/ic_account_box_grey600_16x16.png);
+	float:left;
+}
+.new_user_group_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+    background-image:url(../img/ic_supervisor_account_grey600_16x16.png);
+	float:left;
+}
+.new_user_counting_icon{
+    margin-top:2px;
+	width:16px;
+	height:16px;
+    background-image:url(../img/ic_account_balance_wallet_grey600_16x16.png);
+	float:left;
+}
+.new_sessions_icon{
+	margin-top:2px;
+	width:16px;
+	height:16px;
+    background-image:url(../img/session_16x16.png);
+	float:left;
+}
+.new_select_character{
+	padding-left:20px;
+	float:left;
+	height:26px;
+	width:80px;
+}
+.dropdown-menu .divider{
+	margin:5px 0 !important;
+	background-color: #eeeeee !important;
+}

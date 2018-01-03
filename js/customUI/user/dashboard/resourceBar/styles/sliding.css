@@ -1,0 +1,177 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.io-window-container { //
+	width: 138px;
+	/* Total width of visible columns + border widths (90+2)*2 */
+	height: 190px; //
+	border: solid 1px #000; //
+	background-color: #eee;
+	overflow: hidden;
+	display: inline-block; //
+	margin-left: 50px;
+}
+
+.sliding-window-container {
+	width: 180px;
+	/* Total width of visible columns + border widths (90+0+0)*2 */
+	height: 190px; //
+	border: solid 1px #000; //
+	background-color: #eee;
+	overflow: hidden;
+	display: inline-block; //
+	margin-left: 10px;
+	text-align: center;
+}
+
+.io-window { //
+	width: 138px;
+	/* Total width of all columns in sliding-window + border widths */
+	height: 190px;
+	overflow: hidden;
+}
+
+.sliding-window { //
+	width: 574px;
+	/* Total width of all columns in sliding-window + border widths */
+	height: 190px;
+	overflow: hidden;
+}
+
+.io-window>table, .sliding-window>table {
+	table-layout: fixed;
+	float: left; //
+	width: 90px;
+	height: 190px; //
+	background-color: #aaa; //
+	border: solid 1px #999;
+}
+
+.io-table, .sliding-table {
+	height: 190px; //
+	border: solid 1px #000;
+}
+
+.sliding-table-header {
+	height: 20px;
+}
+
+.sliding-table-data {
+	height: 135px;
+}
+
+.io-table th {
+	text-align: center;
+	height: 20px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.sliding-table th {
+	text-align: center;
+	width: 90px;
+	height: 20px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.sliding-table th>div {
+	width: 90px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.io-table td {
+	text-align: center;
+	vertical-align: bottom;
+	height: 135px;
+}
+
+.sliding-table td {
+	text-align: center;
+	vertical-align: bottom;
+	width: 90px;
+	height: 135px; //
+	border: solid 1px #999;
+}
+
+.sliding-table-data>td>div {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.io-table td>div, .sliding-table td>div {
+	display: inline-block; //
+	text-align: center;
+}
+
+.io-table-data td>div {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+/*
+.banner-slider div{
+    display: inline-block;
+}
+.banner-slider a{
+    display: inline-block;
+}
+
+*/
+.banner-slider {
+	margin-top: 18px;
+	margin-bottom: auto;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.banner-slider .sliding-window-next, .banner-slider .sliding-window-prev
+	{
+	background:
+		url('/static/js/customUI/user/dashboard/resourceBar/images/sprite.png');
+	background-position: -12px -5928px; //0 -5920 px;
+	cursor: pointer;
+	display: inline-block;
+	height: 18px; //
+	margin: -20px 0 0; //
+	opacity: 0.6; //
+	position: absolute; //
+	text-indent: -9999px;
+	top: 50%;
+	width: 14px;
+	z-index: 9999;
+	margin-bottom: 166px;
+}
+
+.banner-slider .sliding-window-prev {
+	left: 0;
+}
+
+.banner-slider .sliding-window-next {
+	background-position: -11px -5972px;
+	right: 0;
+}
+
+.banner-slider .sliding-window-next:hover, .banner-slider .sliding-window-prev:hover
+	{
+	opacity: 0.9;
+}
+
+.banner-slider>div {
+	display: inline-block;
+}
+/*
+.col svg, .col rect {
+	width: 15px;
+}
+*/

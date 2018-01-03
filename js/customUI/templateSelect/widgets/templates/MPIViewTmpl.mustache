@@ -1,0 +1,89 @@
+
+    	<!--MPI模板开始--->
+          <div class="row" style="width:1000px;">
+
+				<form id="job_create_form" class="form-horizontal job-form-group-margin-left" role="form">
+					<div class="form-group" style="margin-top:20px">
+						<label class="col-sm-2 control-label job-font-weight-normal" for="job_create_name">*{{nls.jobName}}</label>
+						
+							<input style="width:250px;margin-left:152px" class="form-control require-input" type="text" id="job_create_name" name="job_create_name">
+						
+					</div>
+					<div class="form-group" style="margin-top:-5px">
+						<label class="col-sm-2 control-label job-font-weight-normal" for="queue_name">*{{nls.queue}}</label>
+						<select class="form-control" id="queue_name" style="width:110px;margin-left:152px">
+							<option value="empty">{{nls.selectOption}}</option>
+						</select>
+					</div>
+					<div class="form-group" style="margin-top:-5px">
+						<label class="col-sm-2 control-label" for="work_dir" style="font-weight:normal">*{{nls.workDir}}</label>
+						<input style="width:250px;margin-left:152px;" class="form-control require-input" type="text" id="work_dir_text" readonly placeholder={{nls.work_dir_notify}}>
+						<button style="margin-left:300px;height:30px;position:relative;top:-30px;left:200px;" type="button" id="work_dir_select_btn" class="btn btn-primary"><div style="margin-top:-2px">{{nls.browse}}</div>
+						</button>
+					</div>
+					<div class="form-group" style="display:none">
+						<label class="col-sm-2 control-label" for="output_dir" style="font-weight:normal;margin-top:-10px">*{{nls.outputPath}}<span style="font-size:small;font-weight:normal">({{nls.outputs}})</span></label>
+						<input style="width:250px;margin-left:152px;position:fixed" class="form-control" type="text" id="output_dir_text" placeholder="Edit hint text in properties panel.">
+						<button style="margin-left:300px;position:fixed;height:30px" type="button" id="output_dir_select_btn" class="btn btn-primary"><div style="margin-top:-2px">{{nls.browse}}</div>
+						</button>
+					</div>
+					<div class="form-group" style="margin-top:10px">
+						<label class="col-sm-2 control-label" for="MPI_prog" style="font-weight:normal">*{{nls.MPIProg}}</label>
+						<input style="width:250px;margin-left:152px;" class="form-control require-input" type="text" id="MPI_prog_text" readonly placeholder="{{nls.MPI_prog_notify}}">
+						<button style="margin-left:300px;height:30px;position:relative;top:-30px;left:200px;" type="button" id="MPI_prog_select_btn" class="btn btn-primary"><div style="margin-top:-2px">{{nls.browse}}</div>
+						</button>
+					</div>
+					<div class="form-group" style="margin-top:10px">
+						<label class="col-sm-2 control-label" for="MPI_arg" style="font-weight:normal">{{nls.MPIArg}}</label>
+						<input style="width:250px;margin-left:152px;" class="form-control" type="text" id="MPI_arg">
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" style="font:bold">{{nls.resReq}}</label>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label job-font-weight-normal">{{nls.nodeNum}}</label>
+						<input style="width:50px;margin-left:152px;height:30px;" class="form-control" type="text" id="nodes_num">
+						<span style="opacity:1;position:relative;left:230px;top:-30px;">{{nls.nodes}}</span>
+						<label class="control-label job-font-weight-normal" style="margin-left:70px;position:relative;top:-30px;left:300px;">{{nls.CPUCoreNum}}</label>
+						<input style="width:50px;margin-left:220px;height:30px;position:relative;top:-55px;left:300px;" class="form-control" type="text" id="CPU_core_num_text">
+						<span style="opacity:1;position:relative;left:580px;top:-80px">{{nls.cores}}</span>
+					</div>
+					<div class="form-group"  style="margin-top:-80px;">
+						<label class="col-sm-2 control-label job-font-weight-normal">{{nls.memSize}}</label>
+						<input style="width:60px;margin-left:152px;height:30px;position:relative;" class="form-control" type="text" id="mem_size_text">
+						<span style="opacity:1;position:relative;left:240px;top:-30px;">{{nls.mega}}</span>
+						<label style="font-size:small;margin-left:157px;padding-top:9px;position:relative;top:-30px;left:200px;" class="control-label job-font-weight-normal">{{nls.walltime}}(Wall Time)</label>
+						<input style="width:50px;position:fixed;margin-left:470px;margin-top:-25px;height:30px;position:relative;top:-30px;left:70px;" class="form-control" type="text" id="walltime_hour">
+						<div class="comment_font_color" style="margin-left:530px;position:fixed;margin-top:-19px;position:relative;top:-35px;left:70px;">{{nls.hour}}</div>
+						<input style="width:50px;position:fixed;margin-left:570px;margin-top:-25px;height:30px;position:relative;top:-35px;left:100px;" class="form-control" type="text" id="walltime_minute">
+						<div class="comment_font_color" style="margin-left:630px;position:fixed;margin-top:-19px;position:relative;top:-40px;left:100px;">{{nls.minute}}</div>
+					</div>
+					<div class="form-group" style="margin-top:-40px">
+						<label class="col-sm-2 control-label" style="font:bold">{{nls.statusNotify}}</label>
+   						<div class="checkbox" style="margin-left:152px">
+							<label>
+								<input id="notice_finish" type="checkbox" value="finish">{{nls.finish}}
+							</label>
+							<label style="margin-left:40px">
+								<input id="notice_suspend" type="checkbox" value="suspend">{{nls.suspend}}
+							</label>
+						</div>
+					</div>
+					<div class="form-group" style="margin-bottom:42px;margin-top:-5px">
+						<label class="col-sm-2 control-label job-font-weight-normal" for="email">{{nls.email}}</label>
+						<input style="width:250px;margin-left:152px;position:relative;" class="form-control" type="text" id="email">
+						<div id="mail_notice" style="margin-left:415px;margin-top:5px;display:none">{{nls.mail_notice}}</div>
+					</div>
+					<div class="form-group" style="margin-bottom:22px;display:none">
+						<label class="col-sm-2 control-label job-font-weight-normal" for="cell">{{nls.phone}}</label>
+						<input style="width:250px;margin-left:152px;position:fixed" class="form-control" type="text" id="cell" placeholder="Edit hint text in properties panel.">
+					</div>
+					<div style="margin-bottom:30px;display:none" class="form-group">
+						<label class="col-sm-2 control-label" for="exec_command">*{{nls.exeCommand}}</label>
+						<textarea style="width:500px;margin-left:152px" class="form-control" rows="9" id="exec_command"></textarea>
+					</div>
+				</form>
+            </div>  
+    	<!---MPI摸板结束--->
+    	
+    	

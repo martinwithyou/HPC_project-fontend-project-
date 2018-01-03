@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>历史趋势图</title>
+		
+	<link rel="stylesheet" type="text/css" href="bower_components/datatables/media/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/datatables/media/css/jquery.dataTables_themeroller.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/datatables-tabletools/css/dataTables.tableTools.css"/>
+    
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+    <style>
+      #history-tab-panel_down{
+      	width:50%;
+      	height:300px;
+      	border:5px solid greenyellow;
+      	margin-left:200px;
+      	margin-top:200px;
+      }
+    </style>
+	</head>
+	<body>
+		
+		
+	<!--	<div id="history-tab-panel_down"></div>-->
+	<div class="dataTable_wrapper" id="listNodesTable_wrapper" style="margin-top:10px;width:80%;">
+		<table class="table table-striped table-hover" style="width:1000px;" id="gListTable"></table>
+	</div>
+	
+	
+<script>
+				$("#gListTable").dataTable({
+//********************************************dataTable参数配置开始*********************************************************
+//********************************************dataTable参数配置开始*********************************************************
+//********************************************dataTable参数配置开始*********************************************************
+
+					responsive: true,
+				    bPaginate:true,
+				    bInfo:true,
+				    sLengthMenu:'',
+				    bLengthChange:true,
+                    language:{
+  "sProcessing":   "处理中...",
+  "sLengthMenu":   "显示 _MENU_ 项结果",
+  "sZeroRecords":  "没有匹配结果",
+  "sInfo":         "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+  "sInfoEmpty":    "显示第 0 至 0 项结果，共 0 项",
+  "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+  "sInfoPostFix":  "",
+  "sSearch":       "搜索:",
+  "sUrl":          "",
+  "sEmptyTable":     "表中数据为空",
+  "sLoadingRecords": "载入中...",
+  "sInfoThousands":  ",",
+  "oPaginate": {
+    "sFirst":    "首页",
+    "sPrevious": "上页",
+    "sNext":     "下页",
+    "sLast":     "末页"
+  },
+  "oAria": {
+    "sSortAscending":  ": 以升序排列此列",
+    "sSortDescending": ": 以降序排列此列"
+  }
+},
+            "bJQueryUI": false,
+			'bPaginate': false, //是否分页
+			"bRetrieve": false, //是否允许从新生成表格
+			"bInfo": false, //显示表格的相关信息
+			"bDestroy": true,
+			"bServerSide": false,
+			"bProcessing": true, //当处理大量数据时，显示进度，进度条等
+			"bFilter": false, //搜索框
+			"bLengthChange": false, //动态指定分页后每页显示的记录数
+			"bSort": false, //排序
+			"bStateSave": false, //缓存
+			"sAjaxDataProp": "data",
+			"sDom": 'T<"clear">lfrtip',
+			"oTableTools": {
+				"sSwfPath": "bower_components/datatables-tabletools/swf/copy_csv_xls_pdf.swf"
+			},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********************************************dataTable参数配置结束***************************************************************
+//********************************************dataTable参数配置结束***************************************************************
+//********************************************dataTable参数配置结束***************************************************************
+					columns:[										
+					{data:null,"title": "<input id=\"checkbox_id_all\" name=\"checkbox_name_all\" type=\"checkbox\" value=\"\">" },
+					{'data': 'hostname','title': "nodeName",'className': 'dt-center'},
+					{'data': 'status','title': "nodeStatus",'className': 'dt-center'},
+					{'data': 'power_status','title': "monitor_turn_on_off",'className': 'dt-center'},
+					{'data': 'type','title': "nodeType",'className': 'dt-center'},
+					{'data': 'bmc_ipv4','title': "bmcIP",'className': 'dt-center'},
+					{'data': 'mgt_ipv4','title': "OSIP",'className': 'dt-center'},
+					{'data': 'cpuCores','title': "CPUCores" ,'className': 'dt-center'},
+					{'data': 'memoryUsage','title': "usedMemory" + "/" + "totalMemory",'className': 'dt-center'},
+					{'data': 'storageUsage','title': "usedStorage" + "/" + "totleStorage",'className': 'dt-center'},
+					{'data': 'groups','title': "groups" ,'className': 'dt-center'}
+					],
+                	aaSorting: [[1, "desc"]],
+	                aoColumnDefs:[//设置列的属性，此处设置第一列不排序,
+                    	{"bSortable": false,
+                         "targets": 0,
+                    	 "data":null,
+                    	 "defaultContent":'<input type="checkbox" value="" name="checkname">'
+                    	},
+						{
+						  "targets": [1], // 目标列位置，下标从0开始
+						  "data": "hostname", // 数据列名
+						  "render": function(data, type, full) { // 返回自定义内容
+						      return data+"<span class='g_monitor_node_details' id='g_icon_details' title='"+"nls.prompt_node_details"+"'></span>";
+						  }
+						},
+						{
+						  "targets": [3], // 目标列位置，下标从0开始
+						  "data": "power_status", // 数据列名
+						  "render": function(data, type, full) { // 返回自定义内容
+							if(data.toLowerCase()=="off"){
+						      return "<span class='g_list_power_on' id='g_icon_on'  title='"+"nls.prompt_power_on"+"'></span>";
+							} else {	
+						      return "<span class='g_list_power_off' id='g_icon_off'  title='"+"nls.prompt_power_off"+"'></span>";
+							}
+						  }
+						},
+						{
+						  "targets": [5], // 目标列位置，下标从0开始
+						  "data": "bmc_ipv4", // 数据列名
+						  "render": function(data, type, full) { // 返回自定义内容
+							if (data != "") {
+								return '<a href="https://' +data + '" target="_blank">' + data + '</a>' + "<span class='g_list_kvm' id='g_icon_kvm' title="+"nls.prompt_kvm"+"></span>"
+							} else {
+							    return "<span class='g_list_kvm' id='g_icon_kvm' title='"+"nls.prompt_kvm"+"'></span>"
+							}
+						  }
+						},
+						{
+						  "targets": [6], // 目标列位置，下标从0开始
+						  "data": "mgt_ipv4", // 数据列名
+						  "render": function(data, type, full) { // 返回自定义内容
+							return data+"<span class='g_list_ssh' id='g_icon_ssh' title='"+"nls.prompt_ssh"+"'></span>"
+						  }
+						}
+	                ],	
+					ajax:{
+						  'url':"data/nodes_data.json",
+						//'url':urlConstants.nodes,
+						// 'url':'/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/data/gList.json',
+						'dataSrc':function(res){
+							
+							//console.log(res);
+							
+							var data=res.nodes,
+								_nodeStatus=[],
+								_nodesType=[];
+							$.each(data,function(index,item){
+								var _usedMemory=parseInt(item.memory_used/1024),
+									_totalMemory=parseInt(item.memory_total/1024),
+									_usedStorage=parseInt(item.disk_used),
+								    _totalStorage=parseInt(item.disk_total),
+								    _typeArr=item.type.split(',');
+								item['memoryUsage']=_usedMemory+"GB/"+_totalMemory+"GB";
+								item['storageUsage']=_usedStorage+"GB/"+_totalStorage+"GB";
+								item['cpuCores']=item.processors_total+"nls.CPUCoreUnit";
+								switch(item.status.toLowerCase()){
+									case "off":
+										item.status="nls.offStatus";
+										break;
+									case "busy":
+										item.status="nls.busyStatus";
+										break;
+									case "used":
+										item.status="nls.workingStatus";
+										break;
+									case "idle":
+										item.status="nls.idleStatus";
+										break;
+								}
+								$.each(_typeArr,function(i,type){
+									switch(type.toLowerCase()){
+										case "head":
+											_typeArr[i]="nls.headNodeType";
+											break;
+										case "compute":
+											_typeArr[i]="nls.computeNodeType";
+											break;
+										case "gpu":
+											_typeArr[i]="nls.gpuNodeType";
+											;break;
+										case "io":
+											_typeArr[i]="nls.ioNodeType";
+											break;
+										case "login":
+											_typeArr[i]="nls.loginNodeType";
+											break;
+									}
+									if($.inArray(_typeArr[i],_nodesType)==-1){
+										if($.trim(_typeArr[i])!=''){
+											_nodesType.push(_typeArr[i]);
+										}										
+									}
+								});								
+								item.type=_typeArr.join(',');
+								if($.inArray(item.status,_nodeStatus)==-1){
+									if($.trim(item.status)!=''){
+										_nodeStatus.push(item.status);
+									}									
+								}								
+							});
+							$("#gListTable").nodeStatusArr=_nodeStatus;
+							$("#gListTable").nodeTypeArr=_nodesType;
+							return data;
+						}
+					}
+				});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+        	
+//创建一个传入参数,创建历史趋势图的函数开始*****************************************************************************
+// function createChart(timeObj,valueObj,startTime){
+// 	
+//  var xValue=timeObj;
+//  
+//  var yValue=valueObj;  
+//  
+//  var startTimes = startTime;
+//// 基于准备好的dom，初始化echarts实例
+//var myChart = echarts.init(document.getElementById('history-tab-panel_down'));
+//// 指定图表的配置项和数据
+//  
+//option = {
+//  tooltip: {
+//      trigger: 'item',
+//      formatter: '{a} <br/>{b} : {c}'
+//  },
+//  legend: {
+//      left: 'left',
+//      data: ['']
+//  },
+//	tooltip: {    
+//		trigger: 'axis'
+//	},
+//  xAxis: {
+//      type: 'category',
+//      name: '',
+//      boundaryGap: false,
+//      splitLine: {show: false},
+//      data: xValue 
+//  },
+//  grid: {
+//  	top:'4%',
+//      left: '2%',
+//      right: '2%',
+//      bottom: '2%',
+//      containLabel: true
+//  },
+//  yAxis: {
+//      type: 'value',
+//      name: ''
+//  },
+//  series: [
+//      {
+//          name: "cpu",
+//          type: 'line',
+//          data: yValue,
+//          itemStyle:{
+//                normal:{color:'#89B6DE'}
+//            }
+//
+//      }
+//     
+//  ]
+//};   
+//
+//var lastIndex_1=startTimes.length-1;
+//
+//var refreshTime=startTime[lastIndex_1];
+//
+//	function refreshChart(){
+//
+//           $.ajax({
+//				type:"get",
+//				url:"data/current.json",
+//				success:function(res){
+//					
+//					var data=res;
+//					
+//					console.log(JSON.stringify(data));
+//					
+//					var value=data.history;
+//					
+//					console.log(value.length);
+//					
+//					if(value.length==0){
+//						
+//						value=[{"time":0,"value":"0"}];
+//						
+//				    }else{
+//				    	
+//				    	var lastIndex=value.length-1;
+//					
+//					    var lastValue=value[lastIndex].value;
+//					
+//					        refreshTime=value[lastIndex].time;
+//					for(x in value){
+//					 	
+//					 	var timeThis=value[x].time;
+//				    	var timeThis=new Date(timeThis*1000);
+//				    	
+//  	                var qtime_hour = timeThis.getHours()+":";
+//		                var qtime_minute = timeThis.getMinutes()+":";
+//		                var qtime_seconds=timeThis.getSeconds()+"";
+//		                
+//		                var qtime_year = timeThis.getFullYear()+"-";
+//		                var qtime_month = timeThis.getMonth()+1+"-";
+//		                var qtime_day = timeThis.getDate();
+//		                
+//				    	var valueThis=value[x].value;
+//				    	
+//				    	xValue.push(qtime_hour+qtime_minute+qtime_seconds+"\n"+qtime_year+qtime_month+qtime_day);
+//				    	xValue.shift();
+//				    	
+//				    	yValue.push(valueThis);
+//				    	yValue.shift();
+//				    	
+//					  }
+//               
+//				    	
+//				    }
+//					
+//               
+//				  },
+//				  error:function(){
+//					  console.log("error");
+//				  }
+//			
+//			  });   
+//
+//myChart.setOption({
+//	   xAxis: {
+//      type: 'category',
+//      name: '',
+//      splitLine: {show: false},
+//      data: xValue 
+//     },
+//    series: [
+//      {
+//          name: "cpu",
+//          type: 'line',
+//          data: yValue,
+//          itemStyle:{
+//                normal:{color:'#89B6DE'}
+//            }
+//        
+//      }
+//   ]
+//});
+//
+//}
+//
+//
+//setInterval(refreshChart,1000);
+//eventBus.off(constants.refreshCpuMax);
+//eventBus.on(constants.refreshCpuMax,refreshChart); 
+// 使用刚指定的配置项和数据显示图表。
+//myChart.setOption(option);
+//
+//window.onresize = myChart.resize;
+//
+//  }
+ 
+ //第一次获取数据的函数 ，如果 返回结果为[]，即重复执行该方法******************************************************************
+ 
+// function judgeWhichOne(timeObj,valueObj,startTime,flag){
+ 	
+// 	if(flag==true){
+ 		
+ 		//eventBus.off(constants.refreshCpuMaxOneMoreTime);
+ 		
+// 		createChart(timeObj,valueObj,startTime);
+ 		
+// 	}else{
+ 		
+ 		//eventBus.off(constants.refreshCpuMaxOneMoreTime);	
+ 		
+ 		//eventBus.on(constants.refreshCpuMaxOneMoreTime,firstTimeGetDataSuccessfully); 
+// 		
+// 	}
+// 	
+// 	
+// 	
+// }
+// var num = 0;
+//function firstTimeGetDataSuccessfully(){
+//	
+//		    //新建x轴的坐标的数组
+//			var timeObj=new Array();
+//			
+//			//新建y轴的坐标的数组		
+//			var valueObj=new Array();
+//			
+//			var startTime=new Array();
+//			
+//			var firstResoult= new Array();
+//			
+//				
+//         $.ajax({
+//         	type:"get",
+//         	//url:urlConstants.oneHour_cpu+"/"+Number($("#body").attr("data-node_id"))+"/tendency/hour/cpu/",
+//         	url:"data/last_hour_history_cpu.json",
+//         	async:false,
+//         	success:function(res){
+//         		        
+//         		        firstResoult=res.history;
+//
+//                      var data=res.history;
+//                      
+////                         firstResoult.length=0;
+//                         
+//                      if(firstResoult.length>0){
+//                      	
+//                      	flag=true;
+//                      	
+//                      for(x in data){
+//				    	
+//				    	startTime.push(data[x].time);
+//				    	
+//				    	var timeThis=data[x].time;
+//				    	var timeThis=new Date(timeThis*1000);
+//				    	
+//  	                var qtime_hour = timeThis.getHours()+":";
+//		                var qtime_minute = timeThis.getMinutes()+":";
+//		                var qtime_seconds=timeThis.getSeconds()+"";
+//		       
+//		                var qtime_year = timeThis.getFullYear()+"-";
+//		                var qtime_month = timeThis.getMonth()+1+"-";
+//		                var qtime_day = timeThis.getDate();
+//		                
+//				    	timeObj.push(qtime_hour+qtime_minute+qtime_seconds+"\n"+qtime_year+qtime_month+qtime_day);
+//				    	
+//				        var valueThis=data[x].value;
+//				        
+//				    	valueObj.push(valueThis);
+//				    	
+//				       }
+//				    
+//				       var lastIndex=valueObj.length-1;
+//				
+//			           var lastValue=valueObj[lastIndex];
+//                     
+//                     judgeWhichOne(timeObj,valueObj,startTime,flag);
+//                     
+//                      }else{
+//                      	
+//                      flag=false;
+//                      	
+//                      judgeWhichOne(timeObj,valueObj,startTime,flag);
+//                    
+//                      
+//                      	
+//                      }
+//                      	
+//
+//
+//                                           
+//         	},
+//         	error:function(){
+//         		
+//         		console.log("第一次获取数据失败");
+//         		
+//         	}
+//         });
+//      
+//
+//         
+//}
+//  
+// //创建一个传入参数,创建历史趋势图的函数结束*****************************************************************************
+//			  	
+//        //  var creatEmptyChart=new creatEmptyChartView({el:$('#history-tab-panel_down')});
+//                      
+//         // creatEmptyChart.render();
+//			
+//			var flag=true;
+//			
+//          firstTimeGetDataSuccessfully();
+//          	
+//
+//         
+</script>
+	</body>
+</html>

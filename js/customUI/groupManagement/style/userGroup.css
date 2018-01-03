@@ -1,0 +1,102 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.block-header {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.block-content {
+	margin-left: 10px;
+}
+
+.overall-padding {
+	padding-top: 20px;
+}
+
+.groupInput {
+	width: 300px;
+	margin-left: 7px;
+	display: inline-block;
+}
+
+#groupTable tr td:first-child {
+	text-align: center;
+}
+
+#groupTable  tr td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/default.png');
+	/*content:"\f10c";*/ /* fa-circle-o */
+	/*content: "\f096";*/ /* fa-square-o */
+	/*font-family: FontAwesome;*/
+}
+
+#groupTable  tr.selected td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/check.png')
+		!important;
+	/*content:"\f05d";*/ /* fa-check-circle-o */
+	/*content: "\f046";*/ /* fa-check-square-o */
+}
+
+#groupTable  tr:hover td.check:before {
+	content:
+		url('/static/js/customUI/admin/userboard/userboard/img/hover.png');
+}
+
+.dt-center {
+	text-align: center;
+}
+
+.modal-footer-overall {
+	margin-bottom: 15px;
+	border-top: none;
+}
+
+.overall-heading {
+	line-height: 60px;
+	vertical-align: middle;
+	height: 60px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.userViewArea {
+	padding-left: 0px;
+}
+
+.multiselect-container.dropdown-menu>.active>a {
+	background-color: white;
+	color: #333;
+}
+#groupTable_length{
+	width:30%;
+	
+	float:left;
+}
+#groupTable_filter{
+	width:30%;
+	
+	float:right;
+}
+#groupTable_info{
+	width:30%;
+	
+	float:left;
+}
+#groupTable_paginate{
+	width:30%;
+	
+	float:right;
+}
+
+.btn-toolbar{
+		height:30px !important;
+	}

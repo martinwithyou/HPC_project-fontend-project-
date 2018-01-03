@@ -1,0 +1,115 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="modal fade" role="dialog" id="groupInfoModal" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+	<div class="modal-dialog modal-overall">
+		<div class="modal-content modal-content-overall">
+			<div class="modal-header modal-header-overall">
+				<h3 class="modal-title modal-title-overall">{{nls.group}}</h3>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group row">
+						<div class="col-sm-10 col-sm-offset-1" id="userGroupMsg"></div>
+					</div>
+					<div class="form-group row inputRow-overall">
+						<div class="col-sm-3 label-modal-overall">
+							<label class="control-label" for="userGroupName">*{{nls.groupName}}: </label>
+						</div>
+						<div class="groupInput">
+							<input type="text" class="form-control" id="userGroupName" autofocus required>
+						</div>						
+						<!-- set as Default Group -->
+						<!-- removed in MVP version
+						<label for="setDefaultGroup"><input type="checkbox" id="setDefaultGroup">{{nls.setDefaultGroup}}</label>
+						-->
+						<!-- end of set as Default Group -->
+					</div>
+					<!-- Group DisplayName -->
+					<!-- removed in MVP version, keep for future use
+					<div class="form-group row">
+						<label for="groupDisplayName" class="col-sm-2 control-label">{{nls.displayName}}</label>
+						<input type="text" class="col-sm-3 form-control groupInput" id="groupDisplayName">
+					</div>
+					-->
+					<!-- end of Group DisplayName -->
+					<!-- Advanced Group Properties -->
+					<!--  removed in MVP version
+					<div class="form-group">
+						<div for="maxUserCount" class="col-sm-2 control-label">{{nls.maxUserCount}}: </div>
+						<div class="col-sm-3">
+							<input type="text" id="maxUserCount" class="form-control">
+						</div>							
+					</div>
+					-->
+					<!--
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-12 block-header">
+								{{nls.resourceLimit}}
+							</div>
+						</div>
+						
+						<div class="row block-content">
+							<div for="nodeCount" class="col-sm-2 control-label">{{nls.nodeCount}}</div>
+							<div class="col-sm-3">
+								<input type="text" class="form-control">
+							</div>
+							<div class="col-sm-3">
+								<div for=""><input type="radio">{{nls.shareNode}}
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div for=""><input type="radio">{{nls.exclusiveNode}}										
+								</div>									
+							</div>								
+						</div>				
+						<div class="row block-content">
+							<div for="CPUcore"  class="col-sm-2 control-label">{{nls.CPUcore}}</div>
+							<div class="col-sm-3">
+								<input type="text" id="CPUcore" class="form-control">
+							</div>
+						</div>	
+						<div class="row block-content">
+							<div for="storageQuota" class="col-sm-2 control-label">{{nls.storageQuota}}</div>
+							<div class="col-sm-3">
+								<input type="text" id="storageQuota" class="form-control">
+							</div>	
+						</div>								
+					</div>
+					-->
+					<!-- end of Advanced Group Properties -->
+					<div class="form-group row inputRow-overall" style="padding-bottom:20px;">
+						<div class="col-sm-3 label-modal-overall">
+							<label for="availableQueue" class="control-label">{{nls.availableQueue}}: </label>
+						</div>
+						
+						<div class="groupInput">
+							<select name="availableQueue" id="availableQueue" class="form-control" multiple="multiple">
+							</select>
+						</div>						
+					</div>
+				</form>
+				
+			</div>
+			<div class="modal-footer modal-footer-overall">
+				<div class="row">
+					<div class="col-sm-6">
+						<button class="btn btn-primary btn-narrowModal" id="groupOKBtn">{{nls.OK}}</button>
+					</div>
+					<div class="col-sm-6">
+						<button class="btn btn-default btn-narrowModal" id="groupCancelBtn" data-dismiss="modal">{{nls.Cancel}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

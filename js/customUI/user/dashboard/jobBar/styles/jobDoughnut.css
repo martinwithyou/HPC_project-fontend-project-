@@ -1,0 +1,53 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.job-container {
+	height: 80%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.job-header {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 25px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+.job-data {
+	height: 75%;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.job-data canvas {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.job-footer {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.job-footer>div {
+	margin-top: 35px;
+	display: inline-block;
+}
+
+.job-footer>div>div {
+	margin-top: 5px;
+	font-size: 13px;
+}

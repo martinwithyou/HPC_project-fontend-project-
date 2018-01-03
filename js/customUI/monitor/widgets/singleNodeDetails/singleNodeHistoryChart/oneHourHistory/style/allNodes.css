@@ -1,0 +1,38 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.monitor_modal_up_right_row{cursor:pointer !important;}
+.monitor_modal_up_right_td{width:97px;height:105px;float:left;}
+.monitor_modal_up_right_td:hover{background-color:#f2f2f2;cursor:pointer;}
+.oneHourHistory_left{width:80px;height:50px;border:1px solid #000000;border-left:0px solid #000000;margin-top:10px;margin-left:8px;}
+/*.oneHourHistory_left:hover{background-color:#f2f2f2;}*/
+.oneHourHistory_right{width:100%;height:50px;padding-left:5px;margin-top:5px;text-align:center;}
+.oneHourHistory_title{font-size:14px;font-family: "微软雅黑";font-weight:400;}
+
+.monitor_modal_up_left_monitor{
+	margin-top:3px;
+	float:left;
+	width:20px;
+	height:20px;
+	background-image: url(../resource/systemMonitor20.png);
+}
+.monitor_the_time_of_choice_title{
+	float:right;
+	height:100%;
+	font-size:14px;
+	font-family: "微软雅黑";
+	font-weight:600;
+}
+.monitor_the_time_of_choice_body{
+	float:right;
+	height:100%;
+	font-size:14px;
+	font-family: "微软雅黑";
+	font-weight:400;
+}

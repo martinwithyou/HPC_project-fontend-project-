@@ -1,0 +1,130 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div>
+
+	<div style="display:none" id="dialog_init">
+	</div>
+
+	<div class="modal fade" id="progressDialog" tabindex ="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top:150px;width:300px">
+			<div class="modal-content">
+				<p style="text-align:center;margin-top:30px;margin-bottom:30px"><img src="/static/js/customUI/user/dashboard/job/resources/loading.gif" id="loading_img"></div></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="jobCreateResult" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="margin-top:150px">
+			<div style="width:475px;margin-left:+35px">
+				<div id ="createResultArea">
+					<img id="resultIcon" style="position:fixed;margin-top:-9px"></img>
+					<div id="createResult" style="position:fixed;margin-left:45px"></div>
+					<div id="jobCreateID" style="margin-left:200px"></div>
+					<button style="margin-top:-20px" type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+         		</div>
+			</div>
+		</div>
+	</div>
+   
+   
+  
+	<div class="modal fade"  id="jobSubmitMain_title" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog"  style="width:690px;">
+	    <div class="modal-content">
+				<div class="modal-header">
+		            <button id="close_job_submit_btn_1" type="button" class="close" data-dismiss="modal" aria-hidden="true">x
+            		</button>
+            		<h4 class="modal-title" style="text-align:center;font-size:16px" id="jobSubmitLabel">作业模板
+            		</h4>
+				</div>
+        	    <div id="jobSubmitMain">
+        	    </div>
+		</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="modal fade elfinder-dlg" id="jobfile-elfinder-dlg" data-backdrop="static">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">{{nls.jobFileEmptyMsg}}</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div id="jobfile-elfinder-dlg-content" style="width:816px !important;height:566px !important;"></div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade elfinder-dlg" id="workdir-elfinder-dlg" data-backdrop="static">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">{{nls.workingDirEmptyMsg}}</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div id="workdir-elfinder-dlg-content"></div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade elfinder-dlg" id="mpiprog-elfinder-dlg" data-backdrop="static">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">{{nls.MPIProgEmptyMsg}}</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div id="mpiprog-elfinder-dlg-content"></div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<div class="modal fade job-submit-dialog" id="jobSubmit" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" style="width:960px;">
+			<div class="modal-content">
+				<div class="modal-header">
+		            <button id="close_job_submit_btn_2" type="button" class="close" data-dismiss="modal" aria-hidden="true">x
+            		</button>
+            		<h4 class="modal-title" style="text-align:center;font-size:16px" id="jobSubmitLabel">{{nls.submitJob}}
+            		</h4>
+				</div>
+		<div id="jobSubmit_body">
+            <div class="select_title_1">
+     		<div class="select_nodes" >{{nls.name_of_group}}:</div>  
+     		<select class="select_select" >
+     		         <option>Cluster_gvhost59</option>
+     	    </select>
+     	    </div>
+        <div class="select_colllection" >
+        </div> 
+            </div>
+         		<div class="modal-footer">           		
+         		</div>
+			</div>
+		</div>
+	</div>
+
+</div>

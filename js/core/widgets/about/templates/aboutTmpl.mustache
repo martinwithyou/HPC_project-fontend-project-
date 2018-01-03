@@ -1,0 +1,32 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div class="modal fade" id="about-dialog" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+	      <button id="close_job_submit_btn" type="button" class="close" data-dismiss="modal" aria-hidden="true">x
+	  		</button>
+	  		<h4 class="modal-title">{{nls.about}}{{constants.productName}}</h4>
+			</div>
+			<div class="modal-body">
+        <div class="clearfix">
+          <div class="license-column left-license-column"><img src="/static/js/core/widgets/about/img/hpc_logo.png"></div>
+          <div class="license-column right-license-column">
+              <div class="about-version"><strong>{{nls.versionNumber}}:</strong> {{constants.productName}} {{constants.version}}</div>
+              <div class="about-company"><strong>{{nls.licenseInfo}}:</strong>  2016 <a href="http://www.lenovo.com" target="_blank">{{nls.lenovoGroup}}</a></div>
+              <div class="about-license"><a href="/static/license/lenovo_ch_license.pdf" target="_blank">{{nls.licenseAgreement}}</a></div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>

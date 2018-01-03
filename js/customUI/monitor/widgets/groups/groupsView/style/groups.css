@@ -1,0 +1,14 @@
+.groups_selected {
+    overflow: hidden;
+    margin: 20px 0;
+    margin-top: 0;
+}
+.groups_l {
+	font-size: 16px;
+}
+.groups_selected_item {
+	margin-left: 20px;
+}
+.new_grouper_icon{
+	background-image:url('/static/js/customUI/monitor/resource/groupView36.png')
+}

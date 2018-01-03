@@ -1,0 +1,137 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+a:link,a:hover,a:visited {
+	text-decoration: none;
+}
+.group-glist {
+	padding:20px;
+}
+.group-glist .mb16{
+	margin-bottom: 16px;
+}
+/*glisttable*/
+
+#gListTable.table>thead>tr>th:first-child{
+	padding-left: 8px;
+	padding-right: 8px;
+}
+#gListTable.table input[type=checkbox], input[type=radio] {
+	width: 18px;
+	height: 18px;
+}
+#gListTable.table .selected {   
+	background-color: #9FAFD1;
+}
+.g_monitor_node_details ,.g_list_power_on,.g_list_power_off,.g_list_kvm,.g_list_ssh {
+	cursor: pointer;
+    margin-top: 2px;
+    vertical-align: bottom;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.g_monitor_node_details{
+	float: right;
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/viewInfo-16.png') no-repeat center;
+}
+.g_row_power_on,.g_list_power_on{
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/powerOn-16.png') no-repeat center;
+}
+.g_list_power_off:hover {
+    box-shadow: 0px 0px 10px #ff0000;
+    border-radius: 8px;
+}
+.g_list_power_on:hover {
+	box-shadow: 0px 0px 10px #00ff00;
+	border-radius:8px;
+}
+.g_row_power_off,.g_list_power_off{
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/powerOff-16.png')  no-repeat center;;
+}
+.g_list_kvm{
+	float: right;
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/kvm-16.png') no-repeat center;
+}
+.g_row_kvm{
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/kvm-16.png')  no-repeat center;
+}
+.g_list_ssh {
+	float: right;
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/ssh-16.png')  no-repeat center;;
+}
+.g_row_ssh{
+	background:url('/static/js/customUI/monitor/widgets/groups/groupView/widgets/gListView/img/ssh-16.png')  no-repeat center;;
+}
+.g_icon {
+    margin-bottom: 2px;
+    vertical-align: bottom;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+
+.g_modal-content {
+	width:500px;
+	height:50px;
+	background-color:#ffffff;
+	font-size:20px;
+	text-align:center;
+	line-height:50px;
+}
+.g-loading {
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:30px
+}
+.g-moda-dialog {
+	margin-top:200px;
+}
+.pl30 {
+	padding-left: 30px;
+}
+.modal_have {
+	display: none;
+}
+
+
+/*开关机返回结果state*/
+#progressDialog_on img,#progressDialog_line_on img ,#progressDialog_off img,#progressDialog_line_off img{
+	position:fixed;
+	margin-top:-9px
+}
+.g-alert-box {
+	position: relative;
+	width:475px;
+	margin-left:+35px;
+}
+ .state_on ,.state_off{
+ 	min-height: 50px;
+	background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.g-state{
+	position: relative; 
+	margin-left: 45px;
+}
+.g-close {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+}
+.tips-content {
+	word-wrap: break-word;
+}

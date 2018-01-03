@@ -1,0 +1,30 @@
+[
+	{
+		"groupName":"VIP组",
+		"maxUserCount":"10",
+		"onlineUserCount":"5",
+		"availableQueue":"",
+		"resourceLimit":""
+	},
+	{
+		"groupName":"计算机系",
+		"maxUserCount":"100",
+		"onlineUserCount":"20",
+		"availableQueue":"",
+		"resourceLimit":""
+	},
+	{
+		"groupName":"物理系",
+		"maxUserCount":"100",
+		"onlineUserCount":"50",
+		"availableQueue":"",
+		"resourceLimit":""
+	},
+	{
+		"groupName":"数学系",
+		"maxUserCount":"100",
+		"onlineUserCount":"80",
+		"availableQueue":"",
+		"resourceLimit":""
+	}
+]

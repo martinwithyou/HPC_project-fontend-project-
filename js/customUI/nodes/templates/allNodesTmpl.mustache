@@ -1,0 +1,36 @@
+<!--
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+-->
+<div>
+	<div class="container-fluid nodesViewArea">
+		<div class="admin-users-title">
+			<h3 class="overall-heading">{{nls.allNodesTitle}}</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="dataTable_wrapper">
+					<table class="table table-striped table-hover" style="width:100%;" id="allNodesTable"></table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+{{!  
+	<div style="display:inline-block;" id="selectArea">
+		<select class="form-control nodeSelectClass" name="nodeStatusSelect" style="min-width:100px;" id="nodeStatusSelect">		
+		</select>
+		<select class="form-control nodeSelectClass" name="nodeTypeSelect" style="min-width:100px;" id="nodeTypeSelect">			
+		</select>
+	</div>
+}}
+	<div style='display:none;font-size:18px;padding-left:20px;' id="nodesCountArea">{{nls.nodesCount}} : <span id="nodesCount"></span></div>
+</div>

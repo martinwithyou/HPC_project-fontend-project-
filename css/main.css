@@ -1,0 +1,198 @@
+body {
+	background-color: #f5feff;
+}
+
+#loginView {
+	background-image: url(../utils/bg.png);
+	background-size:auto;
+}
+
+#loginView header {
+	text-align: left;
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+
+#loginView .content {
+	background-color: #fff;
+	width: 299px;
+	margin-left: 60vw;
+	padding: 20px 30px 15px 30px;
+	box-shadow: 5px 5px 5px #d1d0d0;
+}
+
+#loginView footer {
+	width: 249px;
+	text-align: center;
+	margin:0 auto;
+	padding:10px 10px 0 10px;
+	color: #444;
+	font-size: 11px;
+}
+
+#loginView h3 {
+	text-align: center;
+}
+
+#loginView .loginInput {
+	margin-bottom: 20px;
+}
+
+#loginView .checker {
+	margin-left: 20px;
+	float: left;
+}
+
+#loginView .form-group {
+	height: 50px;
+	border-bottom: 1px solid #eee;
+}
+
+.green {
+	background-color: #35aa47;
+	color: #fff;
+}
+
+
+#userView .task>.desc {
+	font-weight: 300;
+}
+
+.dropdown-menu>li>a {
+	padding: 3px 10px;
+}
+
+.nav .dropdown-toggle>.badge {
+	background-color: red;
+	position: absolute;
+	font-weight: 300;
+	top:8px;
+	right: 24px;
+	text-align: center;
+	height: 14px;
+	padding: 2px 6px;
+}
+
+.nav .dropdown-toggle>i {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.nav .dropdown-menu>li p{
+	padding: 10px;
+	font-weight: 300;
+}
+
+.nav .progress {
+	height: 18px;
+	margin-bottom: 5px;
+}
+
+#userView .content {
+	background-color: #fff;
+	margin:0 auto;
+	padding-top: 70px;
+	min-height: 100vh;
+}
+
+#btn_upload {
+	opacity: 0;
+	display: inline;
+	z-index: 5;
+	position: absolute;
+	width: 100px;
+	height: 34px;
+	margin-left: -90px;
+	margin-top: -5px;
+}
+
+.blockList {
+	width:90%;
+	border:1px solid #e1e1e8;
+	border-radius: 5px;
+	background-color: #E1E1E1;
+	min-height:60vh;
+}
+
+.blockList>header {
+	text-align: center;
+	background-color: #f7f7f9;
+	color: #777;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#adminView {
+	background-color: #fff;
+	min-height: 100vh;
+	margin-top: -5px;
+}
+
+#adminView .picture {
+	margin-top: 20px;
+}
+
+#adminView .dashList {
+	margin-top: 15px;
+	width: 225px;
+	position: absolute;
+}
+
+#adminView .dashboardItem {
+	margin-top: 57px;
+	margin-left: 249px;
+}
+
+#storage {
+	width: 20%;
+	border-radius: 15px;
+	margin-right: 15px;
+	background-color: #27a9e3;
+	color: #fff;
+}
+
+#health {
+	width: 20%;
+	border-radius: 15px;
+	margin-right: 15px;	
+	background-color: #28b779;
+	color: #fff;
+}
+
+#user {
+	width: 20%;
+	border-radius: 15px;
+	margin-right: 15px;	
+	background-color: #852b99;
+	color: #fff;
+}
+
+#pool {
+	width: 20%;
+	border-radius: 15px;
+	margin-right: 15px;	
+	background-color: #ffb848;
+	color: #fff;
+}
+
+.dashBody .icon {
+	margin-top: 10px;
+	float: left;
+	font-size: 36px;
+	display: block;
+	height: 80px;
+}
+
+.dashBody .detail {
+	float: right;
+	display: block;
+}
+
+.dashBody .more {
+	text-align: center;
+	padding-top: 80px;
+}
+
+.navbar-header>img {
+	margin-top: 7px;
+}

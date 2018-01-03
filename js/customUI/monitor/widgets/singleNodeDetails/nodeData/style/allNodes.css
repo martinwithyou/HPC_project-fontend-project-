@@ -1,0 +1,55 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+/*.monitor_modal_up_left{width:50%;height:100%;background-color:#d9d9d9;}*/
+.monitor_modal_up_left_tips{width:16px;height:16px;/*background-image:url(../resource/server-icon.png);*/margin-top:5px;float:left;}
+.monitor_modal_up_left_title{float:left;font-size:16px;font-weight: bold;font-family: "微软雅黑";line-height:25px;margin-left:5px;}
+.monitor_modal_up_left_row{height:25px;width:318px;}
+.monitor_modal_up_left_tr_1{width:70px;height:25px;float:left;line-height:25px;}
+.monitor_modal_up_left_tr_2{width:140px;height:25px;float:left;line-height:25px;/*font-weight:600;*/}
+
+
+
+
+.monitor_modal_up_left_tr_3{width:90px;height:30px;margin-top:15px;float:left;line-height:30px;color:#000000;}
+
+.monitor_modal_up_left_tr_3:hover{width:90px;height:30px;line-height:30px;border:1px solid #d9d9d9;box-shadow: 0px 0px 10px #e2e2e2;border-radius:5px;cursor: pointer;}
+
+
+.new_icon_monitor_WebKVM{float:left;width:16px;height:16px;background-image:url(../resource/kvm-16.png);margin-top:7px;margin-left:10px;margin-right:3px;}
+.new_icon_monitor_WebSSH{float:left;width:16px;height:16px;background-image:url(../resource/ssh-16.png);margin-top:7px;margin-left:10px;margin-right:3px;}
+.new_icon_monitor_turn_on{float:left;width:16px;height:16px;background-image:url(../resource/powerOn-16.png);margin-top:7px;margin-left:10px;margin-right:3px;}
+.new_icon_monitor_turn_off{float:left;width:16px;height:16px;background-image:url(../resource/powerOff-16.png);margin-top:7px;margin-left:10px;/*margin-top:5px;*/margin-right:3px;}
+.new_icon_monitor_turn_icon{float:left;width:16px;height:16px;margin-top:5px;margin-left:10px;margin-top:7px;margin-right:3px;}
+
+
+.monitor_modal_up_left_tr_2_1{height:180%;width:75%;float:left;border:0px solid #333333;font-weight:600;padding-top:3px;background-color:#ffffff;}
+
+
+.monitor_new_icon_title{
+	width:89px;
+	height:100%;
+	background-image:url(../resource/host_detail.png) !important;
+	float:left;
+}
+.monitor_new_icon_title_charactor{
+	width:200px;
+	height:100%;
+	float:left;
+	font-size:24px;
+	font-family: arial;
+	line-height:62px;
+}
+.monitor_part_one{
+	width:25%;
+	height:100%;
+	border-right:1px solid #33333 !important;
+	float:right;
+	margin-bottom:10px;
+}

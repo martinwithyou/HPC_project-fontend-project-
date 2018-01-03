@@ -1,0 +1,518 @@
+/*
+ * © Copyright Lenovo 2015.
+ *
+ * LIMITED AND RESTRICTED RIGHTS NOTICE:
+ *
+ * If data or software is delivered pursuant a General Services Administration
+ * "GSA" contract, use, reproduction, or disclosure is subject to
+ * restrictions set forth in Contract No. GS-35F-05925.
+*/
+.admin-resourcebar {
+	background-color: #ffffff;
+}
+
+.admin-resource-cell {
+	border: 1px solid #E1DFDA;
+	height: 220px;
+	
+}
+/**************************************css修改代码*******************************************/
+/*****************************************************************************************/
+
+/*用户提交作业界面 #footer-wrapper DIV 去处100px高度*/
+#footer-wrapper{height:20px !important;}
+
+/*高分辨率适配问题*/
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+	
+	/*用户字定义模板*/
+	
+	#select_mainContainer_top_out{height:92% !important;}
+	
+	/*文件管理页面*/
+	
+    #user-files{height:460px !important;}
+    
+
+}
+@media only screen and (min-width: 1601px) and (max-width: 1700px) {
+	/*默认高度为1050px*/
+	/*image of bar*/
+	.admin-resource-cell{height:280px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.1);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:500px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #clusterMemory-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #storage-area{width:110px !important;height:110px !important;margin-top:10%;}
+    .resource-header{font-size:12px !important;margin-top:25%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:280px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;}
+    #martinWithYou_3{height:280px !important;}
+    #job_submit_start{margin-top:10%;}
+    #martinWithYou_2{height:280px !important;}
+    #martinWithYou_1{height:280px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:250px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    
+    /*文件管理页面*/
+    #user-files{height:750px !important;}
+}
+@media only screen and (min-width: 1701px) and (max-width: 1800px) {
+	/*默认高度为1050px*/
+	/*image of bar*/
+	.admin-resource-cell{height:280px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.1);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:500px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #clusterMemory-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #storage-area{width:110px !important;height:110px !important;margin-top:10%;}
+    .resource-header{font-size:12px !important;margin-top:25%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:280px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;}
+    #martinWithYou_3{height:280px !important;}
+    #job_submit_start{margin-top:10%;}
+    #martinWithYou_2{height:280px !important;}
+    #martinWithYou_1{height:280px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:250px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    
+    /*文件管理页面*/
+    #user-files{height:750px !important;}
+}
+@media only screen and (min-width: 1801px) and (max-width: 1900px) {
+	/*默认高度为1050px*/
+	/*image of bar*/
+	.admin-resource-cell{height:280px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.1);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:500px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #clusterMemory-area{width:110px !important;height:110px !important;margin-top:10%;}
+    #storage-area{width:110px !important;height:110px !important;margin-top:10%;}
+    .resource-header{font-size:12px !important;margin-top:25%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:280px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.1);margin-top:10%;}
+    #martinWithYou_3{height:280px !important;}
+    #job_submit_start{margin-top:10%;}
+    #martinWithYou_2{height:280px !important;}
+    #martinWithYou_1{height:280px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:250px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    
+    /*文件管理页面*/
+    #user-files{height:750px !important;}
+}
+@media only screen and (min-width: 1901px) and (max-width: 2000px) {
+	/*默认高度为1200px*/
+	/*image of bar*/
+	.admin-resource-cell{height:312px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.3);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:550px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #clusterMemory-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #storage-area{width:120px !important;height:120px !important;margin-top:22%;}
+    .resource-header{font-size:12px !important;margin-top:18%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:312px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;}
+    #martinWithYou_3{height:312px !important;}
+    #job_submit_start{margin-top:30%;}
+    #martinWithYou_2{height:312px !important;}
+    #martinWithYou_1{height:312px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:300px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    
+    /*文件管理页面*/
+    #user-files{height:900px !important;}
+}
+@media only screen and (min-width: 2001px) and (max-width: 2100px) {
+	/*默认高度为1200px*/
+	/*image of bar*/
+	.admin-resource-cell{height:312px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.3);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:550px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #clusterMemory-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #storage-area{width:120px !important;height:120px !important;margin-top:22%;}
+    .resource-header{font-size:12px !important;margin-top:18%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:312px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;}
+    #martinWithYou_3{height:312px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:312px !important;}
+    #martinWithYou_1{height:312px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:300px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    
+    /*文件管理页面*/
+    #user-files{height:900px !important;}
+}
+@media only screen and (min-width: 2101px) and (max-width: 2200px) {
+	/*默认高度为1200px*/
+	/*image of bar*/
+	.admin-resource-cell{height:312px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.3);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:550px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #clusterMemory-area{width:120px !important;height:120px !important;margin-top:22%;}
+    #storage-area{width:120px !important;height:120px !important;margin-top:22%;}
+    .resource-header{font-size:12px !important;margin-top:18%;}
+	.resource-usage{font-size:12px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:312px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.2);margin-top:10%;}
+    #martinWithYou_3{height:312px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:312px !important;}
+    #martinWithYou_1{height:312px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:300px;font-size:8px !important;}
+    #footer-wrapper{height:30px !important}
+    /*文件管理页面*/
+    #user-files{height:900px !important;}
+    
+}
+@media only screen and (min-width: 2201px) and (max-width: 2300px) {
+	/*默认高度为1440px*/
+	/*image of bar*/
+	.admin-resource-cell{height:420px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.8);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:720px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #clusterMemory-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #storage-area{width:150px !important;height:150px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:420px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:420px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:420px !important;}
+    #martinWithYou_1{height:420px !important;padding-top:1%;}
+    table tbody tr th{font-size:12px !important;}
+    table tbody tr td div{font-size:12px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    /*文件管理页面*/
+    #user-files{height:1100px !important;}
+    /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2301px) and (max-width: 2400px) {
+	/*默认高度为1440px*/
+	/*image of bar*/
+	.admin-resource-cell{height:420px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.8);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:720px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #clusterMemory-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #storage-area{width:150px !important;height:150px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:420px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:420px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:420px !important;}
+    #martinWithYou_1{height:420px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    /*文件管理页面*/
+    #user-files{height:1100px !important;}
+    /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2401px) and (max-width: 2500px) {
+	/*默认高度为1440px*/
+	/*image of bar*/
+	.admin-resource-cell{height:420px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.8);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:720px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #clusterMemory-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #storage-area{width:150px !important;height:150px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:420px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:420px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:420px !important;}
+    #martinWithYou_1{height:420px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    /*文件管理页面*/
+    #user-files{height:1100px !important;}
+    
+    /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2501px) and (max-width: 2600px) {
+	/*默认高度为1440px*/
+	/*image of bar*/
+	.admin-resource-cell{height:420px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(1.8);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:720px;}
+	
+	
+	/*image of round*/
+    #clusterCPU-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #clusterMemory-area{width:150px !important;height:150px !important;margin-top:22%;}
+    #storage-area{width:150px !important;height:150px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:420px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:420px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:420px !important;}
+    #martinWithYou_1{height:420px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+
+   /*文件管理页面*/
+    #user-files{height:1100px !important;}
+    
+  /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2601px) and (max-width: 2700px) {
+	/*默认高度为1600px*/
+	/*image of bar*/
+	.admin-resource-cell{height:470px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.8);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(2);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:830px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #clusterMemory-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #storage-area{width:180px !important;height:180px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:470px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:470px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:470px !important;}
+    #martinWithYou_1{height:470px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    
+    /*文件管理页面*/
+    #user-files{height:1300px !important;}
+    
+    /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2701px) and (max-width: 2800px) {
+	/*默认高度为1600px*/
+	/*image of bar*/
+	.admin-resource-cell{height:470px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.8);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(2);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:830px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #clusterMemory-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #storage-area{width:180px !important;height:180px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:470px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:470px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:470px !important;}
+    #martinWithYou_1{height:470px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    
+   /*文件管理页面*/
+    #user-files{height:1300px !important;}
+    
+    /*用户自定义模板*/
+   /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /*.select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+@media only screen and (min-width: 2801px) and (max-width: 2900px) {
+	/*默认高度为1600px*/
+	/*image of bar*/
+	.admin-resource-cell{height:470px !important;}
+	.banner-slider{height:91% !important;}
+	.io-window-container{height:95% !important;width:80%;}
+	.io-window{transform-origin: 0 0;transform: scale(1.8);margin-top:10%;font-size:8px !important;}
+	.io-table th{font-size:8px !important;}
+	.job_chart{transform: scaleY(2);transform-origin: 0 0;font-size: 5px !important;}
+	.admin-jobNodeBar{height:830px;}
+	
+	/*image of round*/
+    #clusterCPU-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #clusterMemory-area{width:180px !important;height:180px !important;margin-top:22%;}
+    #storage-area{width:180px !important;height:180px !important;margin-top:22%;}
+    .resource-header{font-size:18px !important;margin-top:18%;}
+	.resource-usage{font-size:18px !important;margin-top:18%;}
+	
+	/*user page*/
+    #martinWithYou_4{height:470px !important;}
+    #sliding-window-container1{transform-origin: 0 0;transform: scale(1.5);margin-top:10%;}
+    #martinWithYou_3{height:470px !important;}
+    #job_submit_start{margin-top:25%;transform:scale(1.2);}
+    #martinWithYou_2{height:470px !important;}
+    #martinWithYou_1{height:470px !important;padding-top:1%;}
+    table tbody tr th{font-size:8px !important;}
+    table tbody tr td div{font-size:8px !important;}
+    
+    /*作业详情图*/
+    #job-area{height:400px;font-size:8px !important;}
+    #footer-wrapper{display:none;}
+    
+    /*文件管理页面*/
+    #user-files{height:1300px !important;}
+    
+    /*用户自定义模板*/
+    /*.select_part:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+   /* .select_part_general:hover{transform-origin: 0 0;transform: scale(1.5);}*/
+}
+
